@@ -1,0 +1,114 @@
+body {
+    background-color: #000000;
+    font-family: "EB Garamond";
+    color: #dff7d9;
+    text-shadow: 0 0 4px #dff7d9;
+}
+
+section:nth-child(even) {
+    background-color: #04003a;
+    color: inherit;
+}
+
+section {
+    box-shadow: none;   /* to clear box shadow after neon.css */
+}
+
+h1 {
+    color: inherit;
+    text-shadow: 0 0 6px #dff7d9BB;
+    font-family: "Cooper Black";
+}
+
+h2 {
+    font-family: "Cooper Black";
+}
+
+#Home h2 {
+    font-family: "EB Garamond";
+}
+
+
+#logo {
+    background-color: #00000088;
+    background-image: url("../img/logo_blue.svg");
+}
+
+@media (any-hover: hover) {
+    #logo:hover, nav p:hover  {
+        outline: 2px solid #dff7d9;
+    }
+}
+
+nav p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit;
+    outline: 2px solid black;
+    border-radius: 0;
+    background-color: #002e20;
+}
+
+#homeBkgdContainer {
+    z-index: -1;
+}
+
+#squaresDiv {
+    background-color: #00291d;
+}
+
+#binaryDiv {
+    background: linear-gradient(
+        110deg, 
+        #00291d 0%,
+        #00291d 23%,
+        #f7ff6b88 24%,
+        #ff6bfb88 25%,
+        #6bfff888 26%,
+        #00291d 27%,
+        #00291d 48%,
+        #f7ff6b88 49%,
+        #ff6bfb88 50%,
+        #6bfff888 51%,
+        #00291d 52%,
+        #00291d 73%,
+        #f7ff6b88 74%,
+        #ff6bfb88 75%,
+        #6bfff888 76%,
+        #00291d 77%,
+        #00291d 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 500vw 28rem;   
+    text-shadow: none;
+}
+
+.folioItemsWrapper article,
+.folioItemsWrapper img,
+.effectsItemsWrapper article,
+.effectsItemsWrapper iframe {
+    border: 1px solid #dff7d9;
+}
+
+.int::after {
+    background-color: #dff7d9;
+    color: black;
+    outline: 3px solid black;
+}
+
+.modeButton .hoverText {
+    background-color: #002017;
+    color: white;
+}
+
+.modeButton {
+    background-color: #00291d88;
+}
+
+.modeButton svg {
+    fill: #dff7d988;
+}
+
+div #dark {
+    outline: 2px solid #dff7d9;
+}
