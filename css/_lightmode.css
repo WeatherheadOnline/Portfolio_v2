@@ -1,7 +1,7 @@
 body {
     background-color: #FFFFFF;
     font-family: "EB Garamond";
-    color: #000000;
+    color: #00291d;
 }
 
 section:nth-child(even) {
@@ -10,7 +10,7 @@ section:nth-child(even) {
 }
 
 section {
-    box-shadow: none;
+    box-shadow: none;      /* to clear box shadow after neon.css */
 }
 
 
@@ -41,25 +41,53 @@ h2 {
 
 nav p {
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color: #baedb3; */
-    background: linear-gradient(
+    background-color: #dff7d9;
+    /* background: linear-gradient(
         350deg,
         #a9dba3,
         #baedb3 15%,
         #baedb3 85%,
         #ebffe8
-    );
+    ); */
     color: inherit;
     outline: 2px solid white;
     border-radius: 0;
+    filter: drop-shadow(2px 4px 5px #00000022);
 }
 
-#binaryDiv {
-    background-image: url(../img/binaryLightgreen.svg);
+#homeBkgdContainer {
+    z-index: -1;
+    filter: drop-shadow(2px 4px 3px #00000033);
 }
 
 #squaresDiv {
-    background-image: url(../img/squaresLightgreen.svg);
+    background-color: #dff7d9;
+}
+
+#binaryDiv {
+    background: linear-gradient(
+        110deg, 
+        #dff7d9 0%,
+        #dff7d9 23%,
+        #f7ff6bff 24%,
+        #ff6bfbff 25%,
+        #6bfff8c9 26%,
+        #dff7d9 27%,
+        #dff7d9 48%,
+        #f7ff6bff 49%,
+        #ff6bfbff 50%,
+        #6bfff8c9 51%,
+        #dff7d9 52%,
+        #dff7d9 73%,
+        #f7ff6bff 74%,
+        #ff6bfbff 75%,
+        #6bfff8c9 76%,
+        #dff7d9 77%,
+        #dff7d9 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 500vw 28rem;   
 }
 
 .folioItemsWrapper article,
@@ -75,10 +103,19 @@ nav p {
     outline: 3px solid white;
 }
 
+.modeButton .hoverText {
+    background-color: #7ec5ffAA;
+    color: #000000;
+}
+
 .modeButton {
     background-color: #4badff88;
 }
 
 .modeButton svg {
     fill: #094e0088;
+}
+
+div #light {
+    outline: 2px solid #0a5900;
 }
