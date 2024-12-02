@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            }
+        #main-content {
+            height: 100%;
+            width:100%;
+            background-color: #61e9e9A1;
+            background-size: cover;
+        }        
+        .divBubble {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background-image: url("../img/bubble.svg");
+            background-size: contain;
+            opacity: 0.5;
+            transition: all 15s linear;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-content"></div>
+
+<script>
+    const main = document.getElementById("main-content");
+    let s = setInterval(bubbles, 1000);  
+
+    function bubbles() {
+        const divBubble = document.createElement("div");
+        const scaler = Math.floor(15 - (Math.random() * 10)) / 10;
+        divBubble.classList.add("divBubble");
+        divBubble.style.transform = `scale(${scaler}, ${scaler})`;
+        divBubble.style.bottom = "-60px";  
+        divBubble.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        main.appendChild(divBubble);
+        
+        setTimeout(moveDiv, 500, divBubble, scaler);
+        setTimeout(deleteBubble, 15000, divBubble);
+    };
+
+    function moveDiv(bubble, scaler) {
+        let riseHeight = 100 * scaler + 15;  
+                    // determines how far each particle moves. 
+                    // since animation time is constant, a higher distance causes faster movement
+        bubble.style.transform = `translate(0, -${riseHeight}vh)`;
+    };
+
+    function deleteBubble(bubble) {bubble.remove();};
+
+</script>
+</body>
+</html>

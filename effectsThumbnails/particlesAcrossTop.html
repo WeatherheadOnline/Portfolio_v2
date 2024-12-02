@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>Sparkles rain down</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            }
+
+        #main-content {
+            height: 100vh;
+            width: 100vw;
+        }        
+        .sparkle1 {background-image: url(../img/sparkle1.svg);}
+        .sparkle2 {background-image: url(../img/sparkle2.svg);}
+        .sparkle3 {background-image: url(../img/sparkle3.svg);}
+        .sparkle4 {background-image: url(../img/sparkle4.svg);}
+        .sparkle1, .sparkle2, .sparkle3, .sparkle4 {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 0;
+            left: 0;
+            background-size: contain;
+        }
+        .outerDiv {
+            position: absolute;   
+            height: 40px;
+            width: 40px;
+            transition: all 5s;
+            overflow: visible;
+        }
+        @media screen and (any-hover: hover){
+            h3 {font-size: 1.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-content"></div>
+
+<script>
+    window.addEventListener("load", sparkles);
+    const clickable = document.getElementById("main-content");
+    clickable.addEventListener("click", sparkles);
+    setInterval(sparkles, 3500);
+
+    let xCoord = 6;  // determines the spacing between particles
+    let i = 0;  // x-coordinate; increments with each loop
+
+    function sparkles() {
+        let s = setInterval(makeSparkle, 10);
+        setTimeout(function(){
+            clearInterval(s);
+            i = 0;
+        }, 3000);
+    }
+
+    function makeSparkle() {
+        const outerDiv = document.createElement("div");
+        outerDiv.classList.add("outerDiv");
+        outerDiv.style.top = "0";
+        outerDiv.style.left = `${i * xCoord}px`;
+        
+        const innerDiv = document.createElement("div");
+        innerDiv.classList.add(`sparkle${Math.ceil(Math.random()*4)}`);  // 4 = number of SVGs to choose from
+        innerDiv.style.rotate = `${Math.floor(Math.random()*360)}deg`;
+
+        outerDiv.appendChild(innerDiv);
+        document.body.appendChild(outerDiv);
+        setTimeout(moveDiv, 1, outerDiv);
+        i++;
+    }
+
+function moveDiv(sparkle) {
+  let fallHeight = Math.floor(Math.random() * 100) + 200  
+     // determines how far each particle falls. Mimimum distance = 100 (ie 100vh)
+     // since animation time is constant, a higher distance causes faster falling
+  sparkle.style.transform = `translate(0, ${fallHeight}vh)`;
+  setTimeout(function(){sparkle.remove();}, 4000);
+}
+
+</script>
+</body>
+</html>

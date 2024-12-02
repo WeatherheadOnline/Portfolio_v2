@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #main-content {
+            background-color: #DDDDDDCC;
+            background-size: cover;
+        }        
+        .ripple {
+            position: absolute;
+            height: 10px;
+            width: 58px;            
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: scale(0.01,0.01);
+            transition: all 3s linear;
+        }
+        .rippleDiv {
+            background-image: url("../img/ovalDarkblue.svg");
+            animation: fadeInterval 3s linear 1;
+        }
+        .rippleClick {
+            background-image: url("../img/ovalPurple.svg");
+            animation: fadeClick 3s linear 1;
+        }
+        @keyframes fadeInterval {
+            from {opacity: 0.5;}
+            to {opacity: 0;}
+        }
+        @keyframes fadeClick {
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-content"></div>
+
+<script>
+    const main = document.getElementById("main-content");
+    main.style.height = `${self.innerHeight *2}px`;
+    main.style.width = `${self.innerWidth *2}px`;
+    let seedX;
+    let seedY;
+    
+    window.addEventListener("load", ripplesFromInterval);
+    let s = setInterval(ripplesFromInterval, 1000);  
+    main.addEventListener("click", ripplesFromClick);
+
+    function ripplesFromInterval() {
+        seedX = Math.floor(Math.random() * 100);
+        seedY = Math.floor(Math.random() * 100);
+        let r = setInterval(makeRipple, 500, seedX, seedY, "Div");
+        setTimeout(clear, 1500);
+        function clear(){clearInterval(r);};
+    }
+
+    function ripplesFromClick(event) {
+        seedX = Math.floor(event.pageX/self.innerWidth*100);  // convert units from px to vh/vw 
+        seedY = Math.floor(event.pageY/self.innerHeight*100);
+        makeRipple(seedX, seedY, "Click");
+        let r = setInterval(makeRipple, 500, seedX, seedY, "Click");
+        setTimeout(clear, 1000);
+        function clear(){clearInterval(r);};
+    }
+
+    function makeRipple(seedX, seedY, classSuffix) {
+        const rippleDiv = document.createElement("div");
+        rippleDiv.classList.add("ripple");
+        rippleDiv.classList.add(`ripple${classSuffix}`);
+        rippleDiv.style.left = `${seedX}vw`;
+        rippleDiv.style.top = `${seedY}vh`;
+        main.appendChild(rippleDiv);
+        setTimeout(expand, 100, rippleDiv, seedX, seedY);
+        setTimeout(deleteBubble, 3000, rippleDiv);
+    }
+
+    function expand(rippleDiv, seedX, seedY) {
+        rippleDiv.style.transform = `scale(${seedY/10+0.8}, ${seedY/10+0.8})`;
+    };
+
+    function deleteBubble(bubble) {bubble.remove();};
+</script>
+</body>
+</html>

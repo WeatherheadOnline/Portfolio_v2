@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>Shimmering background text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            position: relative;
+            background-color: #000000;
+            overflow: hidden;
+        }
+        svg {position: absolute;}
+        #binaryText {
+            font-size: 2.5rem;
+            font-family: 'DM Mono', monospace;
+            font-weight: 500;
+            text-align: left;
+        }
+        #outerClipped {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            clip-path: url(#binaryClipPath);
+        }
+        @keyframes moveBkgd {
+            from {background-position: 0;}
+            to {background-position: -400vw;}
+        }
+        #innerMovingBkgd {
+            position: absolute;
+            width: 400vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            background: linear-gradient(
+                100deg,
+                #6bff6b20 11%,  
+                #6bff6bff 14%,
+                #6bff6b20 17%,  
+
+                #6bff6b20 47%,  
+                #6bff6bff 50%,
+                #f7ff6bff 50.4%,  
+                #ff6bfbff 50.8%,  
+                #6bfff8c9 51.2%,  
+                #6bff6bff 51.6%,
+                #6bff6b20 53%,  
+
+                #6bff6b20 78%,  
+                #6bff6bff 80%,
+                #6bff6b20 82%
+            );
+            animation: moveBkgd 7s linear infinite;
+        } 
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>          
+        <clipPath id="binaryClipPath">
+            <text id="binaryText">
+                <tspan x="0">00010110110011010110110101010110101011010</tspan>
+                <tspan x="0" dy="1.2em">11010100101110101011110100010110101000101</tspan>
+                <tspan x="0" dy="1.2em">01010110101100010101010010101001010101011</tspan>
+                <tspan x="0" dy="1.2em">00111100101010101010010101010101010101100</tspan>
+                <tspan x="0" dy="1.2em">11010100101110101011110100010110101000101</tspan>
+                <tspan x="0" dy="1.2em">01010110101100010101010010101001010101011</tspan>
+                <tspan x="0" dy="1.2em">00010110110011010110110101010110101011010</tspan>
+                <tspan x="0" dy="1.2em">11010100101110101011110100010110101000101</tspan>
+            </text>
+        </clipPath>
+        </defs>    
+    </svg>    
+    <div id="outerClipped">
+        <div id="innerMovingBkgd"></div>
+    </div>
+
+</body>
+</html>

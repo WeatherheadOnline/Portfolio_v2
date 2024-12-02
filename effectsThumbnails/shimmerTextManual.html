@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Interactive background shimmer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        svg {position: absolute;}
+        body {
+            position: relative;
+            background-color: #FFFFFFA1;
+            overflow: hidden;
+        }
+        #outerClipped {
+            position: absolute;
+            height: 500px;
+            top: 0;
+            left: 0;
+            mask-image: url(../img/wm-2-horizontal.svg);
+            mask-repeat: no-repeat;
+        }
+        #innerMovingBkgd {
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background: linear-gradient(
+                110deg, 
+                #16660000 10%,
+                #166600AA 15%,
+                #630098AA 20%,
+                #8c0000AA 25%,
+                #8c000000 30%,
+                #d9b65900 38%,
+                #d9b659AA 40%,
+                #927321AA 45%,
+                #7a9797AA 50%,
+                #c99f2eAA 55%,
+                #c99f2e00 60%,
+                #16660000 65%,
+                #166600AA 70%,
+                #630098AA 75%,
+                #8c0000AA 80%,
+                #8c000000 85%
+            )
+        } 
+    </style>
+</head>
+<body>
+
+<div id="outerClipped">
+    <div id="innerMovingBkgd"></div>
+</div>
+
+<script>
+    
+    const outerClipped = document.getElementById("outerClipped");
+    const movingBkgd = document.getElementById("innerMovingBkgd");
+    
+    outerClipped.style.width = `${self.innerWidth}px`;
+    movingBkgd.style.width = `${self.innerWidth * 3}px`;
+    outerClipped.style.maskSize = "99%";
+
+    if ("ontouchstart" in window) {
+        mobileListener();
+    } else {
+        desktopListener();
+    };
+
+// Mobile tilt listener
+    function mobileListener() {  
+        window.addEventListener("deviceorientation", function(event){    
+            if (screen.height > screen.width) {  // ie in portrait
+                if (event.gamma < -45) {
+                    movingBkgd.style.left = `${self.innerWidth * 2}px`;
+                } else if (event.gamma > 45) {
+                    movingBkgd.style.left = "0";
+                } else {
+                    movingBkgd.style.left = `${self.innerWidth * 2 / 90 * event.gamma - self.innerWidth}px`;  
+                            // 2 refers to the 2 x self.innerWidth distance the background moves, between gamma=-45 and gamma=45.
+                            // 90 refers to gamma degrees between -45 to the left and 45 to the right
+                };
+            } else {
+                if (event.beta < -45) {
+                    movingBkgd.style.left = `${self.innerWidth * 2}px`;
+                } else if (event.beta > 45) {
+                    movingBkgd.style.left = "0";
+                } else {
+                    movingBkgd.style.left = `${self.innerWidth * 2 / 90 * event.beta - self.innerWidth}px`;  
+                            // 2 refers to the 2 x self.innerWidth distance the background moves, between beta=-45 and beta=45.
+                            // 90 refers to beta degrees between -45 to the left and 45 to the right
+                };
+            }
+        })
+    }
+
+// Desktop mousemove listener
+    function desktopListener () {
+        document.addEventListener("mousemove", function(e) {         
+            movingBkgd.style.left = `${e.pageX*2 - self.innerWidth * 2}px`;
+        });
+    }
+        
+// Resize iframe contents when iframe gets resized
+        let iframeWidth = self.innerWidth;            
+        setInterval(function(){
+            if (iframeWidth != self.innerWidth) {
+                iframeWidth = self.innerWidth;
+                outerClipped.style.width = `${self.innerWidth}px`;
+                movingBkgd.style.width = `${self.innerWidth * 3}px`;
+                outerClipped.style.maskSize = "99%";
+            };
+        }, 1000);
+</script>
+</body>
+</html>

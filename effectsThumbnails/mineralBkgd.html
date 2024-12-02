@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background glitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+        html, body, #bkgdContainer, .layerDiv {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            overflow: hidden;
+        }
+        #bkgdContainer, .layerDiv {
+            width: 200vw;
+            height: 200vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        } 
+        body {
+            position: relative;
+            background-color: #FFFFFF;
+        }
+        button {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .layerDiv {visibility: hidden;}
+        .sparkleDiv {position: absolute;}
+    </style>
+</head>
+<body>
+
+    <div id="bkgdContainer"></div>  
+    <button id="button">Set to dark mode</button> 
+
+    <script>    // Light mode / dark mode button
+        let mode = "light";
+        const button = document.getElementById("button");
+        button.addEventListener("click", function(){
+            if (mode=="light") {
+                document.body.style.backgroundColor = "#181825";
+                button.innerText = "Set to light mode";
+                mode = "dark";            
+            } else if (mode=="dark") {
+                document.body.style.backgroundColor = "#FFFFFF";
+                button.innerText = "Set to dark mode";
+                mode = "light";
+            }
+        });
+    </script>
+    
+    <script>    // Glitter background
+        const ww = window.innerWidth * 2.5;
+        const wh = window.innerHeight * 2.5;
+        const bkgdContainer = document.getElementById("bkgdContainer");
+        const numberOfLayers = 25;
+        const density = 8;
+        const colors = [
+            "#630098AA",
+            "#8c0000AA",
+            "#166600AA",
+            "#d9b659AA",
+            "#927321AA",
+            "#7a9797AA",
+            "#c99f2eAA"
+        ];
+
+        for (let i = 1; i <= numberOfLayers; i++) {makeLayer(i);};
+                
+        function makeLayer(i) {
+            const newDiv = document.createElement("div");
+            newDiv.className = "layerDiv";
+            newDiv.setAttribute("id", `layer${i}`);
+            const svgColor = colors[Math.floor(Math.random() * colors.length)];
+            for (let j = 1; j <= density; j++) {
+                makeSparkle(svgColor, newDiv, i, j);
+            }
+            bkgdContainer.appendChild(newDiv);
+        }
+
+        function makeSparkle(color, div) {
+            const newDiv = document.createElement("div");
+            newDiv.className = "sparkleDiv";
+            newDiv.style.top = `${Math.floor(Math.random() * wh)}px`;
+            newDiv.style.left = `${Math.floor(Math.random() * ww)}px`;
+            newDiv.style.transform = `rotate(${Math.floor(Math.random()*360)}deg) scale(${(Math.floor(15 - (Math.random() * 10))) / 5}, ${(Math.floor(15 - (Math.random() * 10))) / 5})`;  // If using 15, 10, and 10: scale by a number between 0.5 and 1.5 in 0.1 increments
+
+            const newSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            newSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+            newSvg.setAttribute("class", "sparkleSvg");
+            newSvg.setAttribute("height", "18");
+            newSvg.setAttribute("width", "14");
+
+            const newPoly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+            newPoly.setAttribute("points", "0,0 5,9 7,3");
+            newPoly.setAttribute("style", `fill:${color}`);
+
+            newSvg.appendChild(newPoly);
+            newDiv.appendChild(newSvg);
+            div.appendChild(newDiv);
+            };
+
+        //  ~~~~~  Add event listeners  ~~~~~  //
+
+        const thresholdDesktop = 20;
+        const thresholdMobile = 5;
+        const layers = document.getElementsByClassName("layerDiv");
+
+        if ("ontouchstart" in window) { 
+            addMobileListeners();
+        } else {
+            addDesktopListeners();
+        };
+
+        function addDesktopListeners(){
+            for (let l = 1; l <= layers.length; l++) {
+                const sensitivity = Math.floor(Math.random() * 200 + 300);
+                const compactScriptString = `const testDiv${l} = document.getElementById('layer${l}'); document.addEventListener('mousemove', function(event){if ((event.pageX + event.pageY) % ${sensitivity} > 0 && (event.pageX + event.pageY) % ${sensitivity} < ${thresholdDesktop}) {testDiv${l}.style.visibility = 'visible';} else {testDiv${l}.style.visibility = 'hidden';}})`;
+                const newScript = document.createElement("script");
+                newScript.innerHTML = compactScriptString;
+                document.body.appendChild(newScript);
+            };
+        };
+
+        function addMobileListeners() {
+            for (let l = 1; l <= layers.length; l++) {
+                const sensitivity = Math.floor(Math.random() * 40 + 20);  // generates a number between 40 and 60                
+                const compactScriptString = `const testDiv${l} = document.getElementById('layer${l}'); 
+                    window.addEventListener('deviceorientation', function(event){
+                    if (Math.abs((Math.round(event.beta)) + Math.abs(Math.round(event.gamma))) % ${sensitivity} > 0 && (Math.abs(Math.round(event.beta)) + Math.abs(Math.round(event.gamma))) % ${sensitivity} < ${thresholdMobile}) {
+                    testDiv${l}.style.visibility = 'visible';
+                    } else {
+                     testDiv${l}.style.visibility = 'hidden';}}); `;
+                const newScript = document.createElement("script");
+                newScript.innerHTML = compactScriptString;
+                document.body.appendChild(newScript);
+            };
+        }
+
+    </script>
+</body>
+</html>
