@@ -232,16 +232,34 @@
             </hgroup>
             <hgroup class="contact phone">
                 <h3>Phone</h3>
-                <p>I prefer text messages, but you can also try calling. My number is <a href="tel:970-305-4682" class="phonenumber">970-305-4682</a>.</p>
+                <p>I prefer text messages, but you can also try calling. My number is <a href="tel:970-305-4682" class="bold">970-305-4682</a>.</p>
             </hgroup>
             <!-- <hgroup class="contact socials">
                 <h3>Social Media</h3>
                 <p>Here are my social media handles</p>
                 <p>(add these later)</p>
             </hgroup> -->
-            <!-- <form>
-                <h3>This handy contact form</h3>
-            </form> -->
+            <hgroup id="contactHGroup">
+                <h3>Or just jot down a message for me here:</h3>
+                <!-- <p class="contactDesc"></p> -->
+                <form method="post" action="https://contactForm.weatherheaddesign.com">
+                    <fieldset>
+                        <legend><span class="bold">(Optional)</span> What would you like to chat about?</legend>
+                        <label for="new" class="checkbox"><input type="checkbox" id="new" name="concern">Let's talk about a new project</label>
+                        <label for="existing" class="checkbox"><input type="checkbox" id="existing" name="concern">Let's discuss a project we're already working on together</label>
+                        <label for="dev" class="checkbox"><input type="checkbox" id="dev" name="concern">I'm a developer and I have a question</label>
+                        <label for="general" class="checkbox"><input type="checkbox" id="general" name="concern">I have a more general inquiry</label>
+                        <label for="other" class="checkbox"><input type="checkbox" id="other" name="concern">Something else</label>
+                        <label for="hi" class="checkbox"><input type="checkbox" id="hi" name="concern">Just saying hi</label>
+                    </fieldset>
+                    <fieldset>
+                        <!-- <legend>What's your message?</legend> -->
+                        <label for="returnAddress" class="inputText">Your email address: <input type="email" id="returnAddress" required></label>
+                        <label for="subject" class="inputText">Subject: <input type="text" id="subject"></label>
+                        <label for="body" class="inputText">Type your message here: <input type="textfield" id="subject" cols="30" rows="10" required></label>
+                    </fieldset>
+                </form>
+            </hgroup>
         </section>
     </main>
     

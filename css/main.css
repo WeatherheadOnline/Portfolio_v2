@@ -284,7 +284,34 @@ article {
 
 #Contact hgroup {margin-bottom: 2em;}
 #Contact h3, #Contact p {margin: 0.3em 0;}
-.phonenumber {font-weight: bold;}
+.bold {font-weight: bold;}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+label.checkbox {
+    display: block;
+}
+
+label.inputText {
+    display: block;
+    padding: 0.5em 0;
+}
+
+label.inputText input {
+    display: block;
+    width: 60vw;
+}
+
+label.inputText #returnAddress, label.inputText #subject {
+    height: 2.5em;
+}
+
+/* input[type="checkbox"] {
+    display: block;
+} */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
