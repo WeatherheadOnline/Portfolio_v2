@@ -3,8 +3,6 @@ const stylesheets = document.getElementsByClassName("modesheet");
 const lightbutton = document.getElementById("light");
 const darkbutton = document.getElementById("dark");
 
-let mode;
-
 darkbutton.onclick = function() {
     SwitchMode("darkmode");
 };
