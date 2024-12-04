@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/_lightmode.css" type="text/css" class="modesheet">
+    <!-- <link rel="stylesheet" href="css/_ogee.css" type="text/css" class="modesheet"> -->
     <link rel="stylesheet" href="css/effects.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -241,10 +242,14 @@
             </hgroup> -->
             <hgroup id="contactHGroup">
                 <h3>Or just jot down a message for me here:</h3>
-                <!-- <p class="contactDesc"></p> -->
-                <form method="post" action="https://contactForm.weatherheaddesign.com">
+
+
+                <!-- <iframe loading="eager" src="contact.php" title="Contact form"></iframe> -->
+                
+                
+                <form method="POST" action="email.php">
                     <fieldset>
-                        <legend><span class="bold">(Optional)</span> What would you like to chat about?</legend>
+                        <legend> <span class="bold">(Optional)</span> What would you like to chat about? </legend>
                         <label for="new" class="checkbox"><input type="checkbox" id="new" name="concern">Let's talk about a new project</label>
                         <label for="existing" class="checkbox"><input type="checkbox" id="existing" name="concern">Let's discuss a project we're already working on together</label>
                         <label for="dev" class="checkbox"><input type="checkbox" id="dev" name="concern">I'm a developer and I have a question</label>
@@ -253,10 +258,22 @@
                         <label for="hi" class="checkbox"><input type="checkbox" id="hi" name="concern">Just saying hi</label>
                     </fieldset>
                     <fieldset>
-                        <!-- <legend>What's your message?</legend> -->
-                        <label for="returnAddress" class="inputText">Your email address: <input type="email" id="returnAddress" required></label>
-                        <label for="subject" class="inputText">Subject: <input type="text" id="subject"></label>
-                        <label for="body" class="inputText">Type your message here: <input type="textfield" id="subject" cols="30" rows="10" required></label>
+                        <label for="returnAddress" class="labelText">
+                            Your email address: 
+                            <input type="email" id="returnAddress" class="inputText" name="email" required>
+                        </label>
+                        <label for="subject" class="labelText">
+                            Subject: 
+                            <input type="text" id="messageSubject"  class="inputText">
+                        </label>
+                        <div class="flexbox">
+                            <label for="body" class="labelText">
+                                Type your message here: 
+                                <textarea id="messageBody" class="inputText" rows="4" cols="60" required></textarea>
+                            </label>
+                            <button type="submit" id="submitEmail">Send message</button>
+                        </div>
+                        <p class="small italic">I won't share your email address with anyone, and I won't use it for any purpose other than replying to the message you're sending me here. By sending me a message here, you're implicitly giving me the "ok" to reply to you at this email address.</p>
                     </fieldset>
                 </form>
             </hgroup>

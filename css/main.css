@@ -286,32 +286,64 @@ article {
 #Contact h3, #Contact p {margin: 0.3em 0;}
 .bold {font-weight: bold;}
 
+#contactHGroup iframe {
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    position: relative;
+    bottom: 0;
+}
+
 form {
     width: 80%;
     margin: 0 auto;
+    max-width: 800px;
+    min-width: 400px;
 }
 
-label.checkbox {
-    display: block;
+fieldset {
+    margin: 1em 0;
+    padding: 1em 0;
 }
 
-label.inputText {
-    display: block;
-    padding: 0.5em 0;
-}
+label {display: block;}
 
-label.inputText input {
+.inputText, label {
     display: block;
     width: 60vw;
+    min-width: 380px;
+    max-width: 750px;
+    margin: 0.5em auto;
 }
 
-label.inputText #returnAddress, label.inputText #subject {
-    height: 2.5em;
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    min-width: 380px;
+    max-width: 750px;
+    margin: auto;
 }
 
-/* input[type="checkbox"] {
-    display: block;
-} */
+#submitEmail {
+    height: min-content;
+}
+
+.small {font-size: 0.8em;}
+.italic {
+    font-style: italic;
+    width: 60vw;
+    min-width: 300px;
+    max-width: 750px;
+    margin: auto;
+}
+
+
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+}
+
+@media screen and (any-hover: hover) {
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
