@@ -153,9 +153,7 @@
                         <p>Features:</p>
                         <ul>
                             <li>Responsive design: Visitors see the same well-organized content on different window sizes, devices, and screen orientations.</li>
-                            <!-- <li>something about background effects, depending on what I implement</li> -->
                             <li>Visitors can choose dark mode for lower eye strain and reduced battery use.</li>
-                            <!-- <li>Contains special effects. Hint: have you tried dark mode yet?</li> -->
                         </ul>
                     </div>
                 </article>
@@ -170,9 +168,6 @@
                             <li>Responsive design: Visitors see the same well-organized content on different window sizes, devices, and screen orientations.</li>
                             <li>Content is added to the page programatically, so any behind-the-scenes updates are easy to add.</li>
                             <li>Includes a fun snake game, hand-programmed from scratch.</li>
-                            <!-- <li>Something about programatically generated content based on array</li>
-                            <li>allowing the same array to populate both songs by album and songs by alphabet</li>
-                            <li>Something about javascript/canvas snake game</li> -->
                         </ul>
                     </div>
                 </article>
@@ -187,9 +182,6 @@
                             <li>Responsive design: Visitors see the same well-organized content on different window sizes, devices, and screen orientations.</li>
                             <li>Simple, classic design that aligns with the topic of the website and with the customer's vision.</li>
                             <li>Like other websites in this portfolio, this site features multiple pages and each page contain links to other pages on the site.</li>
-                            <!-- <li>nice background</li> -->
-                            <!-- <li>multiple pages</li> -->
-                            <!-- <li>each page contains links to the other pages</li>  -->
                         </ul>
                     </div>
                 </article>
@@ -211,10 +203,12 @@
                     <ul>
                         <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
                         <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
+                        <li>Github account: <a href="https://github.com/WeatherheadOnline">https://github.com/WeatherheadOnline</a></li>
                     </ul>
                 </div>
             </div> 
         </section>
+        
         <section id="Plan">
             <div class="sectionWrapper">
                 <hgroup class="subheader">
@@ -227,6 +221,7 @@
                 <p>After we're done: if you find the site isn't looking or behaving the way it's supposed to, please let me know so I can fix it for you. Any repairs can be done for free within the first six months.</p>
             </div>
         </section>
+        
         <section id="Contact">
             <div class="sectionWrapper">
                 <hgroup class="subheader">
@@ -250,7 +245,6 @@
                                     <p>Your message was sent. Thanks!</p>
                                 </div>
                             ";} ?>
-
                             <div id="nameAndEmail" class="formUnit">  
                                 <div id="userNameWrapper">
                                     <label for="userName" class="labelText">
@@ -267,7 +261,6 @@
                                     </label>
                                 </div>
                             </div>
-
                             <div class="formUnit">
                                 <label for="subject" class="labelText">
                                     Subject
@@ -276,22 +269,17 @@
 
                                 </label>
                             </div>
-
                             <div class="formUnit">
                                 <label for="body" class="labelText">
                                     Message<span class="asterisk">*</span>
                                     <textarea id="messageBody" class="inputText" name="message" rows="4" cols="60" required ><?php echo $_POST['message'] ?></textarea>
                                 </label>
                             </div>
-
-
                             <div id="buttonsWrapper">
                                 <button type="" id="clearForm">Clear the form</button>
                                 <button type="submit" id="submitEmail">Send message</button>
                             </div>
-                            
                             <p id="disclaimer">I won't share your email address with anyone, and I won't use it for any purpose other than replying to the message you're sending me here. By sending me a message here, you're implicitly giving me the "ok" to contact you at this email address.</p>
-                        
                         </fieldset>
                     </form>
                 </hgroup>
@@ -310,11 +298,9 @@
             <p>Boognish logo <a href="https://trademarks.justia.com/owners/ween-3814818/" target="_blank">trademarked</a> by Ween;</p>
             <p>Floral shimmering background design by William Morris; vector reproduction by WeatherheadOnline.com</p>
         </div>
-
     </footer>
 
     <div id="modes">
-
         <div id="dark" class="modeButton">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="800px" height="800px" viewBox="0 0 324.694 324.694" xml:space="preserve">
                 <g>

@@ -28,7 +28,6 @@ h2 {
     font-family: "EB Garamond";
 }
 
-
 #logo {
     background-color: #00000088;
     background-image: url("../img/logo_blue.svg");
@@ -83,6 +82,9 @@ nav p {
     text-shadow: none;
 }
 
+
+/* Portfolio & special effects sections */
+
 .folioItemsWrapper article,
 .folioItemsWrapper img,
 .effectsItemsWrapper article,
@@ -95,6 +97,27 @@ nav p {
     color: black;
     outline: 3px solid black;
 }
+
+
+/* Contact section */
+
+input, textarea {
+    color: #dff7d9;
+    background-color: black;
+} 
+
+#messageSent {
+    background-color: black;
+    border: 4px solid #04003a;
+}
+
+button {
+    background-color: #002e20;
+    color: #dff7d9;
+}
+
+
+/* Mode buttons */
 
 .modeButton .hoverText {
     background-color: #002017;
