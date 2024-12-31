@@ -249,30 +249,29 @@
                                 <div id="userNameWrapper">
                                     <label for="userName" class="labelText">
                                         Name<span class="asterisk">*</span>
-                                        <input type="text" id="userName" class="inputText" name="userName" required
-                                            value="<?php echo isset($_POST['userName']) ? $_POST['userName'] : "" ?>">
+                                        <input type="text" id="userName" class="inputText" name="userName" required >
+                                            <!--value="<?php echo isset($_POST['userName']) ? $_POST['userName'] : "" ?>">-->
                                     </label>
                                 </div>
                                 <div id="returnAddressWrapper">
                                     <label for="returnAddress" class="labelText">
                                         Email address<span class="asterisk">*</span>
-                                        <input type="email" id="returnAddress" class="inputText" name="userEmail" required
-                                            value="<?php echo isset($_POST['userEmail']) ? $_POST['userEmail'] : "" ?>">
+                                        <input type="email" id="returnAddress" class="inputText" name="userEmail" required >
+                                            <!--value="<?php echo isset($_POST['userEmail']) ? $_POST['userEmail'] : "" ?>">-->
                                     </label>
                                 </div>
                             </div>
                             <div class="formUnit">
                                 <label for="subject" class="labelText">
                                     Subject
-                                    <input type="text" id="messageSubject" class="inputText" name="subject" 
-                                        value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >
-
+                                    <input type="text" id="messageSubject" class="inputText" name="subject" >
+                                        <!--value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >-->
                                 </label>
                             </div>
                             <div class="formUnit">
                                 <label for="body" class="labelText">
                                     Message<span class="asterisk">*</span>
-                                    <textarea id="messageBody" class="inputText" name="message" rows="4" cols="60" required ><?php echo $_POST['message'] ?></textarea>
+                                    <textarea id="messageBody" class="inputText" name="message" rows="4" cols="60" required ></textarea>
                                 </label>
                             </div>
                             <div id="buttonsWrapper">
@@ -374,6 +373,8 @@
         $userEmail = dataFilter($_POST['userEmail']);
         $message = dataFilter($_POST['message']);
         
+        date_default_timezone_set("America/Denver");
+        
         $subject = empty($_POST['subject']) 
             ? "New message from contact form on " . date("m/d/Y") . " at " . date("h:ia") 
             : dataFilter($_POST['subject']);
@@ -385,8 +386,7 @@
             return $data;
         }
     
-        date_default_timezone_set("America/Denver");
-        
+        $message = nl2br($message);
         $message = $message . "<br><br><em>Sent by " . $userName . "</em>";
 
         $headers = 'From: ' . $userName . ' <' . $userEmail . '>' . "\r\n" .
