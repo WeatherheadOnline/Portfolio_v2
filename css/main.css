@@ -367,14 +367,34 @@ ul {
 
 .asterisk {color: red;}
 
-/* #messageSent {
-    min-width: max-content;
-    margin: 0;
-    padding: 0.3rem 0.5rem;
-    background-color: #FFFFFF;
-    text-align: right;
-} */
+fieldset {position: relative;}
 
+#messageSent {
+    background-color: white;
+    opacity: 0.9;
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 80%;
+    padding: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#messageSent span {
+    font-size: 3rem;
+    line-height: 1.5rem;
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    cursor: pointer;
+}
+
+#messageSent p {
+    color: var(--blueDk);
+    font-size: 1.5rem;
+    text-align: center;
+}
 
 
 
@@ -382,7 +402,6 @@ ul {
 form {
     width: 100%;
     margin: 0 auto;
-    /* outline: 1px solid blue; */
 
 }
 fieldset {
@@ -394,7 +413,6 @@ fieldset {
     display: block;
     width: 100%;
     padding: 0.3rem 5vw;
-    /* outline: 1px solid green; */
 }
 
 #buttonsWrapper {
@@ -426,18 +444,6 @@ fieldset {
         padding: 0.2rem 0;
     }
 }
-
-
-
-
-
-/* 20vw padding on section (5vw on right, 15vw on left) */
-/* 16vw padding on sectionwrapper, 8vw both sides */
-/* 10vw padding on elements in fieldset, 5vw both sides */
-/* 20 + 16 + 10 = 46 */
-/* 100 - 46 = 54vw remaining */
-/* button width 20vw -> uses up 40vw for two buttons */
-/* 14vw remaining for flex-gap */
 
 
 
