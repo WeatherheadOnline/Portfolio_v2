@@ -68,18 +68,18 @@ header {
 }
 
 nav {
-    padding: 0.5vh 1vh;
+    padding: 0.7vh 1vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 0.5vh 0.5vh;        
+    gap: 0 1rem;        
 }
 
 nav p {
     text-align: center;
-    margin: 0 1vw;
-    padding: 0.5vh 1vw;
+    margin: 0;
     font-size: 1rem;
+    padding: 0.2rem 0.4rem;
 }
 
 nav a {
@@ -94,14 +94,13 @@ nav a {
         width: min-content;
         flex-direction: column;
         align-items: center;
+        padding-top: 1vh;
     }
     nav {
         flex-direction: column;
         width: min-content;
-        height: min-content;
-        display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        gap: 1vh;
     }
     nav p {
         margin: 1vh;
@@ -116,23 +115,22 @@ nav a {
     header {width: 100%;}
     nav {
         height: min-content;
-        padding: 1vh;
-        display: flex;
+        padding: 0.5rem;
         justify-content: flex-end;
-        flex-wrap: wrap;
-        gap: 0.5vh 0.5vh;        
+        gap: 0.5rem max(0.5rem, 3vw);
     }
     nav p {
-        margin: 0;
-        margin-left: calc(2vw - 5px);
-        padding: 0.5vh calc(2vw - 10px);
+        /* margin-left: calc(2vw - 5px); */
+        padding: 0.2rem 0.5rem;
         font-size: 1.1rem;
     }
 }
 
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~  Main  ~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 /* Main: Mobile, portrait orientation */
 
@@ -142,19 +140,46 @@ section {
     min-height: 100vh;
     width: 100%;
     margin: 0;
-    padding: 8vh 5vw;
+    padding: 6vh 0 1vh 0;
+}
+
+.sectionWrapper {
+    position: relative;
+    padding: 0 8vw;
 }
 
 .subheader {text-align: center;}
 
+
 /* Main: Mobile, landscape orientation */
 
 @media screen and (any-hover: none) and (orientation: landscape) {
-    section {padding: 5vh 5vw 5vh 15vw;}
+    section {padding: 3vh 5vw 5vh 15vw;}
 }
 
 @media screen and (any-hover: hover) {
-    section {padding: 6vh 5vw;}    
+    /* section {padding: 6vh 5vw;}     */
+    section {padding: 0;}    
+    .sectionWrapper {
+        padding: 30px 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    .sectionWrapper {width: 400px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    .sectionWrapper {width: 550px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
+    .sectionWrapper {width: 700px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 1000px) {
+    .sectionWrapper {width: 800px;}
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -194,6 +219,7 @@ article {
     min-width: 300px;
     margin: 5vh auto;
     position: relative;
+    box-sizing: border-box;
 }
 
 .articleText {padding: 0 5%;}
@@ -241,6 +267,9 @@ article {
     content: "Interactive! \A Click to see more";
 }
 
+
+    /* Mobile, in landscape */
+
 @media screen and (any-hover: none) and (orientation: landscape) {
     article {
         width: 80vw;
@@ -257,105 +286,280 @@ article {
     }
 }
 
+
+/* Desktop, any screen width */
+
 @media screen and (any-hover: hover) {
+    article {
+        margin: 0;
+    }
     .folioItemsWrapper, .effectsItemsWrapper {
         display: flex;
-        flex-wrap: wrap;
-        gap: 0 5vw;
         justify-content: center;
-    }
-    article {
-        width: 40vw;
-        min-width: 400px;
-        max-width: 1000px;
-        /* margin: unset; */
+        padding-bottom: 3rem;
     }
 }
 
-@media screen and (any-hover: hover) and (max-width: 960px) {
-    article {
-        width: 90vw;
+
+    /* Desktop, screen width below 1000px */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    article {width: 390px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    article {width: 590px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
+    article {width: 650px;}
+}
+
+
+    /* Above 1000px, switch from one column to two */
+
+@media screen and (any-hover: hover) and (max-width: 999px) {
+    .folioItemsWrapper, .effectsItemsWrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4rem;
+    }
+}
+@media screen and (any-hover: hover) and (min-width: 1000px) {
+    .folioItemsWrapper, .effectsItemsWrapper {
+        flex-wrap: wrap;
+        gap: 4rem;
     }
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#Contact hgroup {margin-bottom: 2em;}
-#Contact h3, #Contact p {margin: 0.3em 0;}
-.bold {font-weight: bold;}
+    /* Desktop, screen width 1000px and above */
 
-#contactHGroup iframe {
-    width: 100%;
-    aspect-ratio: 1.5/1;
-    position: relative;
-    bottom: 0;
+@media screen and (any-hover: hover) and (min-width: 1000px) and (max-width: 1199px) {
+    article {width: 450px;}
 }
 
-form {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 800px;
-    min-width: 400px;
+@media screen and (any-hover: hover) and (min-width: 1200px) {
+    article {width: 550px;}
 }
 
-fieldset {
-    margin: 1em 0;
-    padding: 1em 0;
+@media screen and (any-hover: hover) and (min-width: 1366px) {
+    article {width: 600px;}
 }
 
-label {display: block;}
-
-.inputText, label {
-    display: block;
-    width: 60vw;
-    min-width: 380px;
-    max-width: 750px;
-    margin: 0.5em auto;
-}
-
-.flexbox {
-    display: flex;
-    justify-content: space-between;
-    width: 60vw;
-    min-width: 380px;
-    max-width: 750px;
-    margin: auto;
-}
-
-#submitEmail {
-    height: min-content;
-}
-
-.small {font-size: 0.8em;}
-.italic {
-    font-style: italic;
-    width: 60vw;
-    min-width: 300px;
-    max-width: 750px;
-    margin: auto;
-}
-
-
-
-@media screen and (any-hover: none) and (orientation: landscape) {
-}
-
-@media screen and (any-hover: hover) {
-}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-@media screen and (any-hover: none) and (orientation: landscape) {
-    .about-content {padding: 0 5vw;}
+ul {
+    margin-bottom: 5vh;
 }
 
-@media screen and (any-hover: hover) {
-    .about-content {padding: 0 5vw;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.contact p {margin: 0;}
+.contact h3 {margin-bottom: 0.2rem;}
+
+.asterisk {color: red;}
+
+/* #messageSent {
+    min-width: max-content;
+    margin: 0;
+    padding: 0.3rem 0.5rem;
+    background-color: #FFFFFF;
+    text-align: right;
+} */
+
+
+
+
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    /* outline: 1px solid blue; */
+
 }
+fieldset {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.inputText, .labelText {
+    display: block;
+    width: 100%;
+    padding: 0.3rem 5vw;
+    /* outline: 1px solid green; */
+}
+
+#buttonsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    width: 100%;
+    margin: 3vw 0;
+}
+
+#buttonsWrapper button {
+    width: 35vw;
+    padding: 0.2rem 0;
+}
+
+#disclaimer {
+    font-size: 0.8em;
+    font-style: italic;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Mobile, in landscape */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #buttonsWrapper button {
+        width: 25vw;
+        padding: 0.2rem 0;
+    }
+}
+
+
+
+
+
+/* 20vw padding on section (5vw on right, 15vw on left) */
+/* 16vw padding on sectionwrapper, 8vw both sides */
+/* 10vw padding on elements in fieldset, 5vw both sides */
+/* 20 + 16 + 10 = 46 */
+/* 100 - 46 = 54vw remaining */
+/* button width 20vw -> uses up 40vw for two buttons */
+/* 14vw remaining for flex-gap */
+
+
+
+/* Desktop */
+
+
+    /* Desktop, any width */
+
+@media screen and (any-hover: hover) {
+    .inputText, .labelText {
+        padding: 0.3rem 0;
+        margin: 0 auto;
+    }
+    #buttonsWrapper {
+        margin: 10px 0; 
+        justify-content: center; 
+    }
+}
+    
+
+    /* Desktop, screen width up to 600px */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    form, fieldset, #buttonsWrapper {width: 400px;}
+    .inputText, .labelText {
+        width: 390px;
+    }    
+    #buttonsWrapper button {
+        width: 195px; 
+        margin: 10px 5px;
+    }    
+}
+
+
+    /* Desktop, screen width 600px to 786px */
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    form, fieldset, #buttonsWrapper {width: 550px;}
+    .inputText, .labelText {
+        width: 520px;
+    }    
+    #buttonsWrapper button {
+        width: 260px; 
+        margin: 10px 15px;
+    }    
+}
+
+
+    /* Desktop, screen width 786px and above */
+
+    @media screen and (any-hover: hover) and (min-width: 786px){
+        #nameAndEmail {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            gap: 10%;
+        }
+    }
+        
+    
+    /* Desktop, screen width 786px to 1000px */
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
+    form, fieldset, #buttonsWrapper {width: 700px;}
+    .inputText, .labelText {width: 650px;}    
+    #nameAndEmail {
+        width: 650px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+    }
+    #nameAndEmail label, #nameAndEmail input {width: 320px;}
+    #buttonsWrapper {gap: 10px;}
+    #buttonsWrapper button {
+        width: 325px; 
+        margin: 10px 0;
+    }    
+    #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
+    #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
+}
+
+
+
+
+
+
+@media screen and (any-hover: hover) and (min-width: 1000px) {
+    form, fieldset, #buttonsWrapper, #nameAndEmail {width: 800px;}
+    .inputText, .labelText {
+        width: 730px;
+    }    
+    #buttonsWrapper button {
+        width: 365px;
+        margin: 10px 35px;
+    }    
+
+
+
+    form, fieldset, #buttonsWrapper {width: 800px;}
+    .inputText, .labelText {width: 730px;}    
+    #nameAndEmail {
+        width: 730px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+    }
+    #nameAndEmail label, #nameAndEmail input {width: 355px;}
+    #buttonsWrapper {gap: 20px;}
+    #buttonsWrapper button {
+        width: 355px; 
+        margin: 10px 0;
+    }    
+    #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
+    #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
+
+
+
+
+}
+
+
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~  Footer ~~~~~~~~~~~~~~~~~~~~ */

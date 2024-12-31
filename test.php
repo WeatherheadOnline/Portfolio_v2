@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main-test.css" type="text/css">
     <link rel="stylesheet" href="css/_lightmode.css" type="text/css" class="modesheet">
+    <!-- <link rel="stylesheet" href="css/_ogee.css" type="text/css" class="modesheet"> -->
     <link rel="stylesheet" href="css/effects.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +30,11 @@
             <a class="navlink" id="homeLink" href="#Home"><img style="opacity:0" src="img/logo_green.svg" alt="Weatherhead Online logo, linking to top of webpage"></a>
         </div>                        
         <nav>
-            <a class="navlink" id="effectsLink" href="#Effects"><p><span class="hiddenInLandscape">Special </span>Effects</p></a>
-            <a class="navlink" id="portfolioLink" href="#Portfolio"><p>Portfolio</p></a>
-            <a class="navlink" id="aboutLink" href="#About"><p>About</p></a>
-            <a class="navlink" id="planLink" href="#Plan"><p>Expect</p></a>
-            <a class="navlink" id="contactLink" href="#Contact"><p>Contact</p></a>
+            <p><a class="navlink" id="effectsLink" href="#Effects"><span class="hiddenInLandscape">Special </span>Effects</a></p>
+            <p><a class="navlink" id="portfolioLink" href="#Portfolio">Portfolio</a></p>
+            <p><a class="navlink" id="aboutLink" href="#About">About</a></p>
+            <p><a class="navlink" id="planLink" href="#Plan">Expect</a></p>
+            <p><a class="navlink" id="contactLink" href="#Contact">Contact</a></p>
         </nav>
     </header>
     <main>
@@ -50,26 +51,24 @@
                     <p>010101101010101010</p>
                 </div>
             </div>
-            <div class="sectionWrapper">
-                <hgroup class="subheader">
-                    <h1>Welcome to passionate website development.</h1>
-                    <h2>Hi. I'm Eddie, and I love making websites.</h2>
-                </hgroup>
-                <p>Let me bring my passion to your project.</p>
-                <p>Get a <a href="#Portfolio">slick website</a> to show your audience you're a pro.</p> <!-- portfolio link -->
-                <p>Add some <a href="#Effects">special effects</a> to impress them.</p> <!-- special effects link -->
-                <p>Work with a <a href="#About">real person</a> (me!), not an artificial intelligence or a one-size-fits-all tool.</p><!-- about link and/or contact form -->
-                <p><a href="#Contact">Drop me a line</a> and let's talk about your website needs.</p>
-            </div>
+            <hgroup class="subheader">
+                <h1>Welcome to passionate website development.</h1>
+                <h2>Hi. I'm Eddie, and I love making websites.</h2>
+                <!-- <h1>Welcome to our website</h1>
+                <h2>Here is some information.</h2> -->
+            </hgroup>
+            <p>Let me bring my passion to your project.</p>
+            <p>Get a <a href="#Portfolio">slick website</a> to show your audience you're a pro.</p> <!-- portfolio link -->
+            <p>Add some <a href="#Effects">special effects</a> to impress them.</p> <!-- special effects link -->
+            <p>Work with a <a href="#About">real person</a> (me!), not an artificial intelligence or a one-size-fits-all tool.</p><!-- about link and/or contact form -->
+            <p><a href="#Contact">Drop me a line</a> and let's talk about your website needs.</p>
         </section>
 
         <section id="Effects">
-            <div class="sectionWrapper">
-                <hgroup class="subheader">
-                    <h2>Special Effects</h2>
-                    <p>My wheelhouse and passion is making special effects for websites. Here are some examples of my work. You could have any or all of these special effects built into your website. The images used here are just for demonstration and could be changed to different images or styles.</p>
-                </hgroup>
-            </div>
+            <hgroup class="subheader">
+                <h2>Special Effects</h2>
+                <p>My wheelhouse and passion is making special effects for websites. Here are some examples of my work. You could have any or all of these special effects built into your website. The images used here are just for demonstration and could be changed to different images or styles.</p>
+            </hgroup>
             <div class="effectsItemsWrapper">
                 <article id="mineralBkgd" class="int interactiveMouse">
                     <div class="articleText">
@@ -119,17 +118,17 @@
                     </div>
                     <iframe loading="eager" src="effectsThumbnails/ripples.html" title="Ripples"></iframe>
                 </article>
+                
+
             </div> <!-- close "#effectsItemsWrapper" -->
         </section>
 
         <section id="Portfolio"> 
             <!-- Wrap the title and subheading in an hgroup for formatting -->
-            <div class="sectionWrapper">
-                <hgroup class="subheader">
-                    <h2>Examples of my work</h2>
-                    <p>Here's my portfolio. These are all sites I've designed and developed.</p>
-                </hgroup>
-            </div>
+            <hgroup class="subheader">
+                <h2>Examples of my work</h2>
+                <p>Here's my portfolio. These are all sites I've designed and developed.</p>
+            </hgroup>
             <div class="folioItemsWrapper">
                 <article id="jewelery">
                     <a href="https://www.weatherheaddesigns.com" target="_blank"><img loading="lazy" src="img/folio_weatherheaddesigns.png"></a>
@@ -197,97 +196,86 @@
         </section>
 
         <section id="About">
-            <div class="sectionWrapper">
-                <hgroup class="subheader">
-                    <h2>About me</h2>
-                </hgroup>
-                <div>
-                    <p>I love making websites. I’m a molecular biologist by training and trade, and I think DNA and molecular motors are amazing - but it’s just not as much fun as making websites.</p>
-                    <p>I have experience working with clients, particularly in the form of coding Excel Visual Basic tools on commission. I'll be sure to ask you the right questions so that we make something you'll love.</p>
-                    <p>With my photoshop skills and aesthetic savvy, I can handle your website's design in addition to construction. All you need is a vague idea of what you're going for, and I can handle the rest. Of course, you will have as much control over the design as you wish.</p>
-                    <p>I love the process of troubleshooting code, and I'm passionate about ensuring every detail of a website looks and behaves as intended. I'm a stickler for following best practices. Your website's behind-the-scenes code will be well-organized and easy to update and maintain.</p>
-                    <p>Your site will meet modern requirements for Responsive Design, meaning it will look great on your customers' desktop and mobile devices alike, in both portrait and landscape orientations. Your site will also meet modern accessibility requirements, being accessbile to everyone, even if they're using screen readers. <i>This is becoming more important and expected than ever.</i></p> 
-                    <p>Technical specs:</p>
-                    <ul>
-                        <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
-                        <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
-                    </ul>
-                </div>
-            </div> 
-        </section>
-        <section id="Plan">
-            <div class="sectionWrapper">
-                <hgroup class="subheader">
-                    <h2>The Plan: What to expect</h2>
-                </hgroup>
-                <p>If you'd like to find out more, or to take the next step: <a href="#Contact">drop me a line</a>, by <a href="mailto:eddie@weatherheadonline.com"><email>email</email></a> or <a href="sms:970-305-4682">text message</a> (or by <a href="tel:970-305-4682">phone</a>), and we can have a brief chat about the website you'd like to build.</p>
-                <p>We'll set up a time to meet and discuss the details of your website. Phone meetings are ok, although in-person works better. At our meeting we'll sketch out a plan for your site. We'll also review and sign a client/developer agreement before we kick into gear. You can preview it <a href="agreement/index.html" target="_blank">here</a>.</p>
-                <p>As the work on you site progresses, I'll be in touch regularly with updates. From time to time I'll need your input, to make sure we're headed in the right direction. We'll work together to stay on track and on time.</p>
-                <p>At the end, I'll be delighted to show you the finished product. I hope you'll love it as much as I enjoyed making it. We'll sit down together and fill in the brief online forms we need to get your website live on the internet.</p>
-                <p>After we're done: if you find the site isn't looking or behaving the way it's supposed to, please let me know so I can fix it for you. Any repairs can be done for free within the first six months.</p>
+            <hgroup class="subheader">
+                <h2>About me</h2>
+            </hgroup>
+            <div class="about-content">
+                <p>I love making websites. I’m a molecular biologist by training and trade, and I think DNA and molecular motors are amazing - but it’s just not as much fun as making websites.</p>
+                <p>I have experience working with clients, particularly in the form of coding Excel Visual Basic tools on commission. I'll be sure to ask you the right questions so that we make something you'll love.</p>
+                <p>With my photoshop skills and aesthetic savvy, I can handle your website's design in addition to construction. All you need is a vague idea of what you're going for, and I can handle the rest. Of course, you will have as much control over the design as you wish.</p>
+                <p>I love the process of troubleshooting code, and I'm passionate about ensuring every detail of a website looks and behaves as intended. I'm a stickler for following best practices. Your website's behind-the-scenes code will be well-organized and easy to update and maintain.</p>
+                <p>Your site will meet modern requirements for Responsive Design, meaning it will look great on your customers' desktop and mobile devices alike, in both portrait and landscape orientations. Your site will also meet modern accessibility requirements, being accessbile to everyone, even if they're using screen readers. <i>This is becoming more important and expected than ever.</i></p> 
+                <p>Technical specs:</p>
+                <ul>
+                    <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
+                    <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
+                </ul>
             </div>
         </section>
+        <section id="Plan">
+            <hgroup class="subheader">
+                <h2>The Plan: What to expect</h2>
+            </hgroup>
+            <p>If you'd like to find out more, or to take the next step: <a href="#Contact">drop me a line</a>, by <a href="mailto:eddie@weatherheadonline.com"><email>email</email></a> or <a href="sms:970-305-4682">text message</a> (or by <a href="tel:970-305-4682">phone</a>), and we can have a brief chat about the website you'd like to build.</p>
+            <p>We'll set up a time to meet and discuss the details of your website. Phone meetings are ok, although in-person works better. At our meeting we'll sketch out a plan for your site. We'll also review and sign a client/developer agreement before we kick into gear. You can preview it <a href="agreement/index.html" target="_blank">here</a>.</p>
+            <p>As the work on you site progresses, I'll be in touch regularly with updates. From time to time I'll need your input, to make sure we're headed in the right direction. We'll work together to stay on track and on time.</p>
+            <p>At the end, I'll be delighted to show you the finished product. I hope you'll love it as much as I enjoyed making it. We'll sit down together and fill in the brief online forms we need to get your website live on the internet.</p>
+            <p>After we're done: if you find the site isn't looking or behaving the way it's supposed to, please let me know so I can fix it for you. Any repairs can be done for free within the first six months.</p>
+        </section>
         <section id="Contact">
-            <div class="sectionWrapper">
-                <hgroup class="subheader">
-                    <h2>I'd love to hear from you! You can reach me by:</h2>
-                </hgroup>
-                <hgroup class="contact email">
-                    <h3>Email</h3>
-                    <p>My email address is <a href="mailto:eddie@weatherheadonline.com"><email>eddie@weatherheadonline.com</email></a>.</p>
-                </hgroup>
-                <hgroup class="contact phone">
-                    <h3>Phone</h3>
-                    <p>I prefer text messages, but you can also try calling. My number is <a href="tel:970-305-4682" class="bold">970-305-4682</a>.</p>
-                </hgroup>
-                <hgroup id="contactHGroup">
-                    <h3>Or just jot down a message for me here:</h3>
-                    <form method="POST" action="#contactHGroup">
-                        <fieldset>
-
-
-
-                            <div id="nameAndEmail" class="formUnit">  
-                                <div id="userNameWrapper">
-                                    <label for="userName" class="labelText">
-                                        Name<span class="asterisk">*</span>
-                                        <input type="text" id="userName" class="inputText" name="userName" required >
-                                    </label>
-                                </div>
-                                <div id="returnAddressWrapper">
-                                    <label for="returnAddress" class="labelText">
-                                        Email address<span class="asterisk">*</span>
-                                        <input type="email" id="returnAddress" class="inputText" name="userEmail" required >
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="formUnit">
-                                <label for="subject" class="labelText">
-                                    Subject
-                                    <input type="text" id="messageSubject" class="inputText" name="subject" >
+            <hgroup class="subheader">
+                <h2>I'd love to hear from you! You can reach me by:</h2>
+            </hgroup>
+            <hgroup class="contact email">
+                <h3>Email</h3>
+                <p>My email address is <a href="mailto:eddie@weatherheadonline.com"><email>eddie@weatherheadonline.com</email></a>.</p>
+            </hgroup>
+            <hgroup class="contact phone">
+                <h3>Phone</h3>
+                <p>I prefer text messages, but you can also try calling. My number is <a href="tel:970-305-4682" class="bold">970-305-4682</a>.</p>
+            </hgroup>
+            <hgroup id="contactHGroup">
+                <h3>Or just jot down a message for me here:</h3>
+                <form method="POST" action="#contactHGroup">
+                    <fieldset>
+                        <div id="nameAndEmail">  
+                            <div id="userNameWrapper">
+                                <label for="userName" class="labelText">
+                                    Name<span class="asterisk">*</span>
                                 </label>
+                                <input type="text" id="userName" name="userName" required 
+                                    value="<?php echo isset($_POST['userName']) ? $_POST['userName'] : "" ?>">
                             </div>
-
-                            <div class="formUnit">
-                                <label for="body" class="labelText">
-                                    Message<span class="asterisk">*</span>
-                                    <textarea id="messageBody" class="inputText" name="message" rows="4" cols="60" required ></textarea>
+                            <div id="returnAddressWrapper">
+                                <label for="returnAddress" class="labelText">
+                                    Email address<span class="asterisk">*</span>
                                 </label>
+                                    <input type="email" id="returnAddress" name="userEmail" required 
+                                        value="<?php echo isset($_POST['userEmail']) ? $_POST['userEmail'] : "" ?>">
                             </div>
-
-
-                            <div id="buttonsWrapper">
+                        </div>
+                        <label for="subject" class="labelText">
+                            Subject
+                            <input type="text" id="messageSubject" class="inputText" name="subject" 
+                                placeholder ="<?php echo isset($_POST['subject']) ? "" : "(optional)" ?>" 
+                                value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >
+                        </label>
+                        <label for="body" class="labelText">
+                            Message<span class="asterisk">*</span>
+                            <textarea id="messageBody" class="inputText" name="message" rows="4" cols="60" required ><?php echo $_POST['message'] ?></textarea>
+                        </label>
+                        <div id="buttonsContainer">
+                            <?php  if (isset ($_POST['subject']) ) {echo "<p id='messageSent'>Your message was sent. Thanks!</p>";} ?>
+                            <p></p>  <!-- placeholder for flexbox -->
+                            <div id="formButtons">
                                 <button type="" id="clearForm">Clear the form</button>
                                 <button type="submit" id="submitEmail">Send message</button>
                             </div>
-                            
-                            <p id="disclaimer">I won't share your email address with anyone, and I won't use it for any purpose other than replying to the message you're sending me here. By sending me a message here, you're implicitly giving me the "ok" to contact you at this email address.</p>
-                        
-                        </fieldset>
-                    </form>
-                </hgroup>
-            </div>
+                        </div>
+                        <p id="disclaimer">I won't share your email address with anyone, and I won't use it for any purpose other than replying to the message you're sending me here. By sending me a message here, you're implicitly giving me the "ok" to contact you at this email address.</p>
+                    </fieldset>
+                </form>
+            </hgroup>
         </section>
     </main>
     
@@ -375,6 +363,54 @@
 
     </div>  <!-- close container for mode buttons -->
 
+    <?php
+        if (isset ($_POST['concern'])) {
+            switch ($_POST['concern']) {
+                case 'new':
+                    $concern = "Let's talk about a new project.";
+                    break;
+                case 'existing':
+                    $concern = "Let's discuss a project we're already working on together.";
+                    break;
+                case 'dev':
+                    $concern = "I'm a developer and I have a question.";
+                    break;
+                case 'general':
+                    $concern = "I have a more general inquiry.";
+                    break;
+                case 'other':
+                    $concern = "Something else.";
+                    break;
+                case 'hi':
+                    $concern = "Just saying hi.";
+                    break;
+                default: 
+                    "Error, or no option was selected.";
+            }
+        }
+
+        date_default_timezone_set("America/Denver");
+        
+        $subject = empty($_POST['subject']) 
+            ? "New message from contact form on " . date("m/d/Y") . " at " . date("h:ia") 
+            : $_POST['subject'];
+
+        $message = $_POST['message'] . "<br><br><em>Sent by " . $_POST['userName'] . "</em>";
+            if ( isset($_POST['concern']) ) {
+                $message = $message . "<em>; Reason for contact: " . $concern . "</em>";
+            }
+        
+        $headers = 'From: ' . $_POST['userEmail'] . "\r\n" .
+            'Reply-To: weatherheadonline@gmail.com, ' . $_POST['userEmail'] . "\r\n" .
+            'Content-type: text/html' . "\r\n";
+            // 'BCC: eddie.weatherhead@gmail.com' . "\r\n";   // in production, change this to WO@g.com & change "to" and "reply-to" to e@WO.com
+
+        $to = 'Eddie <weatherheadonline@gmail.com>';
+        
+        // mail($to, $subject, $message, $headers);
+
+    ?>
+    
     <script src="js/modes-basic.js"></script>
     <!-- <script src="js/modes.js"></script> -->
     <script src="js/background-glimmer.js"></script>
