@@ -146,9 +146,9 @@
                 </article>
 
                 <article id="this">
-                    <a href="index.html"><img loading="lazy" src="img/folio_this.png"></a>   
+                    <a href="#Home" target="_blank"><img loading="lazy" src="img/folio_this.png"></a>   
                     <div class="articleText">                 
-                        <h3>WeatherheadDesign.com</h3>
+                        <h3>WeatherheadOnline.com</h3>
                         <p>This website! It's pretty great.</p>
                         <p>Features:</p>
                         <ul>
@@ -185,6 +185,15 @@
                         </ul>
                     </div>
                 </article>
+
+                <article>
+                    <a href="/CSSsandbox/" target="_blank"><img loading="lazy" src="img/folio_sandbox.png"></a>
+                    <div class="articleText">
+                        <a href="/CSSsandbox/" target="_blank"><h3>My CSS sandbox</h3></a>
+                        <p>Several interesting background effects can be seen here. My favorite is one that looks iridescent.</p>
+                        <p>Please note, this site is for testing purposes rather than for general consumption. As such, its layout is not responsive and its appearance and performance may be suboptimal on mobile devices.</p>
+                    </div>
+                </article>
             </div>  <!-- close folioItemsWrapper  -->
         </section>
 
@@ -203,7 +212,7 @@
                     <ul>
                         <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
                         <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
-                        <li>Github account: <a href="https://github.com/WeatherheadOnline">https://github.com/WeatherheadOnline</a></li>
+                        <li>Github account: <a href="https://github.com/WeatherheadOnline" target="_blank">https://github.com/WeatherheadOnline</a></li>
                     </ul>
                 </div>
             </div> 
