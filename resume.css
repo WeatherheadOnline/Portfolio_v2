@@ -32,8 +32,6 @@ body {
 
 }
 
-p, li {color: var(--text);}
-
 #sparkleContainer {
     position: fixed;
     z-index: -2;
@@ -46,6 +44,92 @@ p, li {color: var(--text);}
     margin: 0;
     padding: 0;
 }
+
+
+/* *************** */
+/* ***  Fonts  *** */
+/* *************** */
+
+h1, p, li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+h1 span {font-weight: bold;}
+
+
+.box h2 {
+    font-family: "Cooper Black", monospace;
+    color: var(--headings);
+    margin: 1vh 0;
+    font-size: 2vh;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.box p {font-size: 1.7vh;}
+
+@media (any-hover: none) and (orientation: landscape) {
+
+
+    .box h2 {
+        text-align: left;
+        padding-left: 1.2rem;
+        font-size: 5vh;
+        margin: 1vh 0;
+    }
+    .box p {
+        font-size: 4vh;
+        margin: 2.5vh 0;
+    }
+
+    #CreNav h2 {font-size: 2.5vw;}
+    #CreNav p, #CreNav li {font-size: 2vw;}
+
+
+}
+
+
+
+@media (any-hover: hover) and (max-width: 599px) {
+    h1, navbar p {font-size: 0.8rem;}
+    .box.landing h2 {
+        text-align: center;
+    }
+    .box h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    h1, navbar p {font-size: 0.8rem;}
+
+    .box h2 {
+        font-size: 1.5rem;
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+    .box p {font-size: 1rem;}
+}
+
+
+@media (any-hover: hover) and (min-width: 786px) {
+    .box h2 {
+        font-size: 1.8rem;
+    }
+    .box p {
+        font-size: 1.2rem;
+    }
+    #CreNav h2 {font-size: 1.5rem;}
+
+    h3.arrow {
+        font-size: 1.8rem;
+        width: 9rem;
+    }    
+}
+
 
 
 /* ***************** */
@@ -71,15 +155,6 @@ p, li {color: var(--text);}
     box-sizing: content-box;
 }
 
-h1, p, li {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-h1 span {font-weight: bold;}
-
-
 navbar {
     display: flex;
     flex-wrap: wrap;
@@ -91,8 +166,10 @@ navbar {
     top: 2vh;
 }
 
+navbar > * {
+    box-shadow: 2px 2px 8px -3px var(--text);
 
-navbar a {text-decoration: var(--headings) underline;}
+}
 
 h1, navbar p {
     color: var(--text);
@@ -101,6 +178,13 @@ h1, navbar p {
     padding: 0.3rem 0.5rem;
     margin: 0;
 }
+
+
+
+navbar a {text-decoration: var(--headings) underline;}
+
+p, li {color: var(--text);}
+
 
 .featuredText {
     font-family: "Cooper Black", monospace;
@@ -122,18 +206,8 @@ h1, navbar p {
     background-color: var(--boxBkgd);
     border: 1px solid var(--boxLine);
     padding: 0 0.5rem;
+    box-shadow: 2px 2px 12px -2px var(--text);
 }
-
-.box h2 {
-    font-family: "Cooper Black", monospace;
-    color: var(--headings);
-    margin: 1vh 0;
-    font-size: 2vh;
-    text-align: right;
-    padding-right: 2rem;
-}
-
-.box p {font-size: 1.7vh;}
 
 #skillsSummary p:last-child {font-style: italic;}
 
@@ -147,7 +221,6 @@ h1, navbar p {
 #photo {
     width: 60vw;
     height: auto;
-
     bottom: 0;
     left: 2vw;
     transition: all 0.2s linear;
@@ -213,16 +286,6 @@ h1, navbar p {
         height: min-content;
         margin: 0;
     }
-    .box h2 {
-        text-align: left;
-        padding-left: 1.2rem;
-        font-size: 5vh;
-        margin: 1vh 0;
-    }
-    .box p {
-        font-size: 4vh;
-        margin: 2.5vh 0;
-    }
     #languages {width: 27vw;}    
     #skillsSummary { width: 49vw;
     }    
@@ -247,14 +310,6 @@ h1, navbar p {
     /* Desktop, any screen width */
 
 @media (any-hover: hover) {
-    /* #photoWrapper {
-        margin: 0 auto;
-    } */
-    /* img {
-        height: 40vh;
-        width: auto;
-    }
-    #funQuote {text-wrap: nowrap;} */
 }
 
 
@@ -270,8 +325,6 @@ h1, navbar p {
         top: 0.5rem;
         column-gap: 1vw;
     }
-    h1, navbar p {font-size: 0.8rem;}
-
     #statementNarrow {
         font-size: 2rem;
         width: 25rem;
@@ -280,10 +333,6 @@ h1, navbar p {
     
     .box.landing {
         width: 90vw;
-    }
-
-    .box.landing h2 {
-        text-align: center;
     }
 
     #photoWrapper {
@@ -355,12 +404,6 @@ h1, navbar p {
     #skillsSummary {
         width: 350px;
     }
-    .box h2 {
-        font-size: 1.5rem;
-        text-align: left;
-        padding-left: 1.5rem;
-    }
-    .box p {font-size: 1rem;}
     #photoWrapper {
         position: absolute;
         height: 45vh; 
@@ -408,12 +451,6 @@ h1, navbar p {
     #languages {width: 300px;}
     #skillsSummary {width: 440px;}
     .box.landing {margin: 0;}
-    .box.landing h2 {
-        font-size: 1.8rem;
-    }
-    .box.landing p {
-        font-size: 1.2rem;
-    }
     #photoWrapper {
         position: absolute;
         height: 50vh;
@@ -429,6 +466,7 @@ h1, navbar p {
         text-wrap: nowrap;
         margin-bottom: 3rem;
     }
+    
 }
 
 
@@ -458,6 +496,11 @@ h1, navbar p {
     text-align: center;
 }
 
+h2 {
+    text-shadow: 3px 3px 0 var(--shadow);
+    
+}
+
 h3 {
     font-family: "Cooper Black", monospace;
     color: var(--headings);
@@ -465,6 +508,10 @@ h3 {
     font-size: 1.5rem;
     text-align: center;
     width: 10rem;
+    animation-name: shadow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 h3.effects {
@@ -487,11 +534,6 @@ ul {
 
 li {
     line-height: 1.4rem;
-}
-
-#CreNav h2 {
-    /* font-size: 1.05rem; */
-    /* text-align: center; */
 }
 
 #folioArrows {
@@ -524,16 +566,130 @@ h3.arrow::after {
 
 #effectsH3::after {
     transform: rotate(200deg);
-    /* position: relative; */
     right: -50px;
     top: 0;
 }
 
 #seeThisH3::after {
-    /* transform: scaleX(-1) rotate(90deg); */
     transform: rotate(-10deg);
-    /* position: relative; */
     left: -30px;
     top: 30px;
-
 }
+
+@keyframes shadow {
+    0% {text-shadow: 3px 3px 0 #75cdcb;}
+    20% {text-shadow: 3px 3px 0 #5ce66e;}
+    40% {text-shadow: 3px 3px 0 #efa26d;}
+    60% {text-shadow: 3px 3px 0 #61e1cd;}
+    80% {text-shadow: 3px 3px 0 #5cbae6;}
+    100% {text-shadow: 3px 3px 0 #75cdcb;}
+}
+
+
+
+/* Mobile, in landscape */
+
+@media (any-hover: none) and (orientation: landscape) {
+    #folioWrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height:110vh;
+        padding: 2vw;
+        align-items: center;
+    }
+    #folioWrapper > div {margin: 0;}
+    #portfolio {
+        width: 25vw;
+        min-width: min-content;
+    }
+    #folioWrapper h2 {
+        padding: 0;
+        text-align: center;
+    }
+    #CreNav {width: 65vw;}
+    h3.arrow {
+        font-size: 3vw;
+        width: 15vw;
+    }    
+    #effectsH3 {
+        right: 5vw;
+        top: 2vh;
+    }
+    #seeThisH3 {
+        left: -5vw;
+        top: 8vh;
+    }
+    #seeThisH3::after {
+        transform: scaleY(-1) rotate(-90deg);
+        left: 15vw;
+        top: -13vh;
+    }
+}
+
+
+
+/* Desktop */
+
+
+    @media (any-hover: hover) {
+        #folioWrapper > div {margin: 0;}
+        h3 {margin: 0;}
+    }
+
+
+    /* Desktop, screen width below 786px */
+
+@media (any-hover: hover) and (max-width: 785px) {
+    #folioWrapper, #folioWrapper > div {
+        width: 480px;
+        margin: 0 auto;
+    }
+}
+
+
+    /* Desktop, screen widths above 786px */
+
+@media (any-hover: hover) and (min-width: 786px) {
+    #folioWrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height:110vh;
+        padding: 50px;
+        column-gap: 20px;
+        justify-content: flex-start;
+    }
+    #portfolio {
+        width: 230px;
+        align-self: flex-end;
+    }
+    #folioWrapper h2 {
+        padding: 0;
+        text-align: center;
+    }
+    #CreNav {
+        width: 420px;
+        align-self: flex-start;
+    }
+    #folioArrows {
+        align-self: flex-end;
+        width: 230px;
+
+    }
+    #effectsH3 {
+        right: 50px;
+        top: 20px;
+    }
+    #seeThisH3 {
+        left: 30px;
+        top: 60px;
+    }
+    #seeThisH3::after {
+        transform: scaleY(-1) rotate(-50deg);
+        left: 80px;
+        top: -70px;
+    }
+}
+    
+
