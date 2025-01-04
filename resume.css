@@ -1,0 +1,415 @@
+/* ***************** */
+/* ***  General  *** */
+/* ***************** */
+
+
+:root {
+    --boxBkgd:#FFFFFF88;
+    --bkgd: #dff7d9;
+    --boxLine:#efa26d;
+    /* --quotes: #00a2a248; */
+    --quotes: #0094a248;
+    --shadow: #75cdcb;
+    --headings: #004933;
+    --text: #061e4b;
+    --triangles: #c8f1be;
+}
+
+* {box-sizing: border-box;}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    background-color: var(--bkgd);
+    position: relative;
+}
+
+p, li {color: var(--text);}
+
+#sparkleContainer {
+    position: fixed;
+    z-index: -2;
+}
+
+#sparkleContainer > div {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ***************** */
+/* ***  Landing  *** */
+/* ***************** */
+
+
+/* First: mobile, in portrait */
+
+#landing {height: 100vh;}
+
+#landingBkgd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 25vh solid var(--triangles);
+    border-bottom: 25vh solid var(--triangles);
+    z-index: -1;
+    box-sizing: content-box;
+}
+
+h1, p, li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+h1 span {font-weight: bold;}
+
+navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw 3vw;
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    top: 2vh;
+}
+
+navbar a {text-decoration: var(--headings) underline;}
+
+h1, navbar p {
+    color: var(--text);
+    background-color: var(--boxBkgd);
+    border: 1px solid var(--boxLine);
+    padding: 0.3rem 0.5rem;
+    margin: 0;
+}
+
+.featuredText {
+    font-family: "Cooper Black", monospace;
+    color: var(--quotes);
+}
+
+#statementNarrow {
+    text-align: center;
+    font-size: 7.5vw;
+    width: 98vw;
+    margin: 5vh auto 2vh auto;
+}
+
+#statementWide {display: none;}
+
+.box {
+    width: 95vw;
+    margin: 1.3vh auto;
+    background-color: var(--boxBkgd);
+    border: 1px solid var(--boxLine);
+    padding: 0 0.5rem;
+}
+
+.box h2 {
+    font-family: "Cooper Black", monospace;
+    color: var(--headings);
+    margin: 1vh 0;
+    font-size: 2vh;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.box p {font-size: 1.7vh;}
+
+#skillsSummary p:last-child {font-style: italic;}
+
+img {
+    width: 60vw;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 2vw;
+    transition: all 0.2s linear;
+    transform-origin: bottom;
+    /* visibility: hidden; */
+}
+
+#funQuote {
+    text-wrap: wrap;
+    text-align: right;
+    font-size: 5vh;
+    width: 45vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem 0.6rem;
+    line-height: 6vh;
+}
+
+
+/* Desktop, or mobile in landscape: change the background triangles */
+
+@media (any-hover: none) and (orientation: landscape), (any-hover: hover) {
+    #landingBkgd {
+        height: 0;
+        width: 50vw;
+        border-top: 50vh solid transparent;
+        border-bottom: 50vh solid transparent;
+        border-left: 25vw solid var(--triangles);
+        border-right: 25vw solid var(--triangles);    
+    }   
+}
+
+
+/* Mobile, in landscape */
+
+@media (any-hover: none) and (orientation: landscape) {
+    navbar {
+        justify-content: space-between;
+        width: 95vw;
+    }
+    #statementNarrow {display: none;}    
+    #statementWide {
+        display: block;
+        font-size: 4vw;
+        text-align: center;
+        width: 98vw;
+        margin: 5vh auto 2vh auto;
+    }
+    #landingBoxes {
+        position: relative;
+        right: 0vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 3vw;
+        justify-content: right;
+        padding-right: 3vw;
+    }
+    #landingBoxes .box {
+        height: min-content;
+        margin: 0;
+    }
+    .box h2 {
+        text-align: left;
+        padding-left: 1.2rem;
+        font-size: 5vh;
+        margin: 1vh 0;
+    }
+    .box p {
+        font-size: 4vh;
+        margin: 2.5vh 0;
+    }
+    #languages {width: 27vw;}    
+    #skillsSummary { width: 49vw;
+    }    
+    img {
+        height: 50vh;
+        width: auto;
+        left: 2vw;
+    }    
+    #funQuote {
+        right: 54vw;
+        font-size: 1.5rem;
+        width: 7rem;
+        line-height: 1.5rem;
+    }    
+}
+
+
+/* Desktop */
+
+
+    /* Desktop, any screen width */
+
+@media (any-hover: hover) {
+    navbar {
+        margin: 0 1rem;
+        justify-content: left;
+        gap: 5px 15px;
+    }
+    #landingBoxes {
+        display: flex;
+        flex-direction: row;
+        align-items:flex-start;
+        column-gap: 20px;
+        justify-content: center;
+    }
+    .box h2 {
+        font-size: 1.5rem;
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+    .box p {font-size: 1rem;}
+
+    img {
+        height: 40vh;
+        width: auto;
+    }
+    #funQuote {text-wrap: nowrap;}
+}
+
+
+    /* Desktop, screen widths below 786px */
+
+@media (any-hover: hover) and (max-width: 785px) {
+    #statementNarrow {
+        font-size: 2rem;
+        width: 25rem;
+        margin: 3.5vh auto 0 auto;
+    }   
+    #funQuote {
+        text-wrap: nowrap;
+        width: max-content;
+        font-size: 2.4rem;
+    }
+}
+
+
+    /* Desktop, screen widths below 600px */
+
+
+    /* Desktop, screen widths above 786px */
+
+@media (any-hover: hover) and (min-width: 786px) {
+    #statementNarrow {display: none;}    
+    #statementWide {
+        display: block;
+        text-align: center;
+        font-size: 2.4rem;
+        margin: 4vh 0 2vh 0;
+        width: 100%;
+    }   
+    #languages { width: 350px;}
+    #skillsSummary {width: 390px;}
+    #landingBoxes .box {margin: 0;}
+    /* landingBoxes' width = 20px (gap) + 350px + 390px = 760px */
+    #photoWrapper {
+        width: 760px;
+        margin: 0 auto;
+        position: relative;
+        bottom: 0;
+    }
+    img {
+        position: relative;
+        /* width: 60vw; */
+        /* height: auto; */
+        /* left: 2vw; */
+    }
+}
+
+
+    /* Desktop, screen widths above 1200px */
+
+@media (any-hover: hover) and (min-width: 1200px) {
+    #statementWide {
+        font-size: 3rem;
+        margin: 5vh 0 3vh 0;
+    }
+    #landingBoxes {column-gap: 35px;}
+}
+
+
+/* ******************* */
+/* ***  Portfolio  *** */
+/* ******************* */
+
+/* ***  Don't add background styling yet  *** */
+
+#folioSection {
+    min-height: 100vh;   
+    margin-top: 3vh;
+}
+
+#portfolio h2, #portfolio p {
+    text-align: center;
+}
+
+h3 {
+    font-family: "Cooper Black", monospace;
+    color: var(--headings);
+    text-shadow: 3px 3px 0 var(--shadow);
+    font-size: 1.5rem;
+    text-align: center;
+    width: 10rem;
+}
+
+h3.effects {
+    transform: rotate(-10deg);
+}
+
+h3.seeThis {
+    transform: rotate(10deg);
+}
+
+.box.folio h2 {
+    text-align: left;
+    padding-left: 2rem;
+    /* text-wrap: nowrap; */
+}
+
+ul {
+    list-style-position: outside;
+}
+
+li {
+    line-height: 1.4rem;
+}
+
+#CreNav h2 {
+    /* font-size: 1.05rem; */
+    /* text-align: center; */
+}
+
+#folioArrows {
+    /* position: relative; */
+}
+
+h3.arrow {
+    position: relative;
+    margin: 2.5rem auto;
+}
+
+#effectsH3 {
+    right: 80px;
+}
+
+#seeThisH3 {
+    left: 80px;
+}
+
+h3.arrow::after {
+    content: "";
+    display: block;
+    height: 60px;
+    width: 50px;
+    background-image: url(arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+#effectsH3::after {
+    transform: rotate(200deg);
+    /* position: relative; */
+    right: -50px;
+    top: 0;
+}
+
+#seeThisH3::after {
+    /* transform: scaleX(-1) rotate(90deg); */
+    transform: rotate(-10deg);
+    /* position: relative; */
+    left: -30px;
+    top: 30px;
+
+}

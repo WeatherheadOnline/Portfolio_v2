@@ -1,0 +1,176 @@
+:root {
+    --blueBkgd: #d2fbf6;
+    --blueLines: #00a2a2;
+    --blueSVG: #0e757f;
+    --blueText: #061e4b;
+    --greenLt: #dff7d9;
+    --greenDk: #004933;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: var(--greenDk);
+    font-family: "Cooper Black", monospace;
+}
+
+h1 {margin: 1rem 0;}
+h2 {margin-top: 0.5rem;}
+p {font-family: Arial, Helvetica, sans-serif;}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+navbar {
+    top: 0.5rem;
+    right: 0.5rem;
+    min-width: min-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    gap: 0.2rem 2rem;
+}    
+
+navbar a {
+    background-color: var(--greenLt);
+    border: 1px solid var(--greenDk);
+    text-decoration: none;
+}    
+
+navbar p {
+    color: var(--greenDk);
+    margin: 0.3rem 0.8rem;
+    width: max-content;
+}    
+
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+#svgWrapper {
+    width: 100px;
+    background-image: url(phone.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 10px;
+    transform: scaleX(-1);
+}
+
+section > div {
+    width: max-content;
+    height: max-content;
+    max-width: 80vw;
+    border: 1px solid var(--greenDk);
+    background-color: var(--blueBkgd);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+main > section:nth-child(1) > div {transform: rotate(5deg);}
+main > section:nth-child(2) > div {transform: rotate(-5deg);}
+h2 {text-decoration: var(--blueLines) wavy underline;}
+section p {color: var(--blueText);}
+
+section a {
+    color: var(--blueSVG);
+    text-decoration: var(--blueLines) underline;
+}
+
+
+/* Mobile, in landscape */
+
+@media (any-hover: none) and (orientation: landscape) {
+    header > div {
+        justify-content: left;
+        gap: 2rem;
+        margin-left: 2rem;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+    section > div {
+        max-width: 40vw;
+        border: 1px solid var(--greenDk);
+        background-color: var(--blueBkgd);
+        margin: 0 3vw;
+    }
+    main > section:nth-child(1) > div {transform: rotate(-5deg);}
+    main > section:nth-child(2) > div {transform: rotate(5deg);}
+    section {position: relative;}
+    main > section:nth-child(3) > div {
+        position: relative;
+        top: -5rem;
+    }
+}
+
+@media (any-hover: hover) {
+    navbar {
+        justify-content: space-evenly;
+        max-width: 786px;
+        margin: 0 auto;
+    }
+    h1 {font-size: 3rem;}
+    #svgWrapper {width: 130px;}
+}
+
+@media (any-hover: hover) and (max-width: 600px) {
+    navbar {justify-content: right;}
+}
+
+@media (any-hover: hover) and (min-width: 786px) {
+    header > div {
+        justify-content: center;
+        gap: 3rem;
+        margin: 2rem auto;
+    }
+    main {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+    }
+    section > div {
+        width: 40vw;
+        max-width: max-content;
+        border: 1px solid var(--greenDk);
+        background-color: var(--blueBkgd);
+        margin: 0;
+    }
+    main > section:nth-child(1) > div {transform: rotate(-5deg);}
+    main > section:nth-child(2) > div {transform: rotate(5deg);}
+    section {position: relative;}
+    main > section:nth-child(3) > div {
+        position: relative;
+        top: 2rem;
+        width: max-content;
+        max-width: 80vw;
+    }
+    main > section:nth-child(1)::after {
+        display: block;
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-image: url(lines.svg);
+        background-size: contain;
+        transform: rotate(260deg) translate(0, 200px);
+        background-repeat: no-repeat;
+    }
+}
