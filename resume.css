@@ -11,7 +11,8 @@
     --quotes: #0094a248;
     --shadow: #75cdcb;
     --headings: #004933;
-    --text: #061e4b;
+    /* --text: #061e4b; */
+    --text: #033876;
     --triangles: #c8f1be;
 }
 
@@ -27,6 +28,8 @@ html, body {
 body {
     background-color: var(--bkgd);
     position: relative;
+    overflow-x: hidden;
+
 }
 
 p, li {color: var(--text);}
@@ -52,7 +55,7 @@ p, li {color: var(--text);}
 
 /* First: mobile, in portrait */
 
-#landing {height: 100vh;}
+#landing {height: 100vh; margin: 0;}
 
 #landingBkgd {
     position: absolute;
@@ -76,6 +79,7 @@ h1, p, li {
 
 h1 span {font-weight: bold;}
 
+
 navbar {
     display: flex;
     flex-wrap: wrap;
@@ -86,6 +90,7 @@ navbar {
     position: relative;
     top: 2vh;
 }
+
 
 navbar a {text-decoration: var(--headings) underline;}
 
@@ -132,10 +137,17 @@ h1, navbar p {
 
 #skillsSummary p:last-child {font-style: italic;}
 
-img {
+
+#photoWrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+#photo {
     width: 60vw;
     height: auto;
-    position: fixed;
+
     bottom: 0;
     left: 2vw;
     transition: all 0.2s linear;
@@ -156,6 +168,8 @@ img {
 }
 
 
+
+
 /* Desktop, or mobile in landscape: change the background triangles */
 
 @media (any-hover: none) and (orientation: landscape), (any-hover: hover) {
@@ -174,7 +188,7 @@ img {
 
 @media (any-hover: none) and (orientation: landscape) {
     navbar {
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 95vw;
     }
     #statementNarrow {display: none;}    
@@ -212,7 +226,8 @@ img {
     #languages {width: 27vw;}    
     #skillsSummary { width: 49vw;
     }    
-    img {
+    #photoWrapper {}
+    #photo {
         height: 50vh;
         width: auto;
         left: 2vw;
@@ -226,23 +241,119 @@ img {
 }
 
 
-/* Desktop */
+/* ***  Desktop  *** */
 
 
     /* Desktop, any screen width */
 
 @media (any-hover: hover) {
+    /* #photoWrapper {
+        margin: 0 auto;
+    } */
+    /* img {
+        height: 40vh;
+        width: auto;
+    }
+    #funQuote {text-wrap: nowrap;} */
+}
+
+
+    /* Desktop, screen widths below 600px */
+
+@media (any-hover: hover) and (max-width: 599px) {
+
+    navbar {
+        margin: 0 0.5rem;
+        width: 95vw;
+        justify-content: left;
+        gap: 5px 15px;
+        top: 0.5rem;
+        column-gap: 1vw;
+    }
+    h1, navbar p {font-size: 0.8rem;}
+
+    #statementNarrow {
+        font-size: 2rem;
+        width: 25rem;
+        margin: 5vh auto 0 auto;
+    } 
+    
+    .box.landing {
+        width: 90vw;
+    }
+
+    .box.landing h2 {
+        text-align: center;
+    }
+
+    #photoWrapper {
+        position: absolute;
+        height: 35vh; 
+        /* width: 100vw; */
+        bottom: 0;
+    }
+
+    #photo {
+        height: 35vh;
+        width: auto;
+        left: 0;
+        bottom: 0;
+        margin-left: 2vw;
+    }
+
+    #funQuote {
+        width: 12rem;
+        font-size: 2.4rem;
+        padding-right: 2rem;
+    }
+
+
+}
+
+
+@media (any-hover) and (max-width: 450px) {
+    #funQuote {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 8rem;
+    }
+}
+
+
+
+
+
+    /* Desktop, screen widths between 600px and 786px */
+
+@media (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
     navbar {
         margin: 0 1rem;
         justify-content: left;
         gap: 5px 15px;
+        /* top: 0.5rem; */
+        column-gap: 1vw;
     }
+    h1, navbar p {font-size: 0.8rem;}
+
+    #statementNarrow {
+        font-size: 2rem;
+        width: 25rem;
+        margin: 6vh auto 1.25rem auto;
+    }   
     #landingBoxes {
         display: flex;
         flex-direction: row;
         align-items:flex-start;
-        column-gap: 20px;
+        column-gap: 10px;
         justify-content: center;
+        margin-top: 1rem;
+    }
+    .box.landing {margin: 0;}
+    #languages {
+        width: 230px;
+    }
+    #skillsSummary {
+        width: 350px;
     }
     .box h2 {
         font-size: 1.5rem;
@@ -250,60 +361,73 @@ img {
         padding-left: 1.5rem;
     }
     .box p {font-size: 1rem;}
-
-    img {
-        height: 40vh;
+    #photoWrapper {
+        position: absolute;
+        height: 45vh; 
+        width: 600px;
+        bottom: 0;
+        left: calc(50vw - 300px);
+    }
+    #photo {
+        height: 45vh;
         width: auto;
     }
-    #funQuote {text-wrap: nowrap;}
-}
 
-
-    /* Desktop, screen widths below 786px */
-
-@media (any-hover: hover) and (max-width: 785px) {
-    #statementNarrow {
-        font-size: 2rem;
-        width: 25rem;
-        margin: 3.5vh auto 0 auto;
-    }   
     #funQuote {
-        text-wrap: nowrap;
-        width: max-content;
+        width: 12rem;
         font-size: 2.4rem;
+        padding-right: 2rem;
     }
 }
 
 
-    /* Desktop, screen widths below 600px */
 
-
-    /* Desktop, screen widths above 786px */
+    /* Desktop, screen widths between 786px and 1200px */
 
 @media (any-hover: hover) and (min-width: 786px) {
+    navbar {
+        margin: 0 1rem;
+        justify-content: left;
+        gap: 5px 15px;
+    }
     #statementNarrow {display: none;}    
     #statementWide {
         display: block;
         text-align: center;
         font-size: 2.4rem;
-        margin: 4vh 0 2vh 0;
+        margin: 7vh 0 5vh 0;
         width: 100%;
     }   
-    #languages { width: 350px;}
-    #skillsSummary {width: 390px;}
-    #landingBoxes .box {margin: 0;}
-    /* landingBoxes' width = 20px (gap) + 350px + 390px = 760px */
-    #photoWrapper {
-        width: 760px;
-        margin: 0 auto;
-        position: relative;
-        bottom: 0;
+    #landingBoxes {
+        display: flex;
+        flex-direction: row;
+        align-items:flex-start;
+        column-gap: 20px;
+        justify-content: center;
     }
-    img {
-        position: relative;
-        /* width: 60vw; */
-        /* height: auto; */
-        /* left: 2vw; */
+    #languages {width: 300px;}
+    #skillsSummary {width: 440px;}
+    .box.landing {margin: 0;}
+    .box.landing h2 {
+        font-size: 1.8rem;
+    }
+    .box.landing p {
+        font-size: 1.2rem;
+    }
+    #photoWrapper {
+        position: absolute;
+        height: 50vh;
+        width: 760px;
+        bottom: 0;
+        left: calc(50vw - 380px);
+    }
+    #photo {
+        height: 50vh;
+        width: auto;
+    }
+    #funQuote {
+        text-wrap: nowrap;
+        margin-bottom: 3rem;
     }
 }
 
@@ -313,7 +437,7 @@ img {
 @media (any-hover: hover) and (min-width: 1200px) {
     #statementWide {
         font-size: 3rem;
-        margin: 5vh 0 3vh 0;
+        margin: 6.5vh 0 4vh 0;
     }
     #landingBoxes {column-gap: 35px;}
 }
