@@ -739,22 +739,80 @@ h3.arrow::after {
 /* ***************** */
 
 #historySection {
-    padding: 2rem 0;
+    padding: 5vh 2.5vw;
     background-image: linear-gradient(
         to top,
         var(--quotes),
         var(--bkgd)
     );
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: auto auto auto auto;
+    gap: 5vw;
+    margin: 0 auto;
 }
 
 .box.headingBox {
     width: max-content;
+    grid-row: 1;
+    grid-column: span 2;
     /* align-self: center; */
 }
 
 .box.headingBox h2 {
     text-align: center;
     padding: 0 2rem;
+}
+
+#historySection > div:nth-child(2) {   /* Research scientist I */
+    width: 45vw;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#historySection > div:nth-child(3) {   /* Gained skills */
+    width: 45vw;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+#historySection > div:nth-child(4) {   /* On-the-job coding */
+    width: 45vw;
+    grid-row: 2 / span 2;
+    grid-column: 2;
+}
+
+#historySection > div:nth-child(5) {   /* During the first month */
+    grid-row: 4;
+    grid-column: 1 / span 2;
+}
+
+
+@media (any-hover: none) and (orientation: landscape) {
+    #historySection {
+        row-gap: 2vh;
+        column-gap: 5vw;
+    }
+    #historySection > div:nth-child(2) {   /* Research scientist I */
+        width: 45vw;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #historySection > div:nth-child(4) {   /* On-the-job coding */
+        width: 45vw;
+        grid-row: 3;
+        grid-column: 1;
+    }
+    #historySection > div:nth-child(3) {   /* Gained skills */
+        width: 45vw;
+        grid-row: 4;
+        grid-column: 1;
+    }
+    #historySection > div:nth-child(5) {   /* During the first month */
+        width: 45vw;
+        grid-row: 2 / span 3;
+        grid-column: 2;
+    }
 }
 
 
@@ -775,7 +833,7 @@ h3.arrow::after {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 5vh 0;
+    margin: 4vh 0 6vh 0;
 }
 
 #skillsSection > div > div:not(:first-child) {
@@ -888,3 +946,116 @@ h3.arrow::after {
     transform: rotate(180deg) scaleY(-1);
     filter: drop-shadow(0px 0px 1px var(--headings));
 }
+
+
+
+@media (any-hover: none) and (orientation: landscape) {
+    #skillsSection > div:not(:first-child) {
+        display: grid;
+    }
+
+    /* ~ Skills: First elaboration ~ */
+
+    #skillsSection > div:nth-child(2) {
+        grid-row: auto auto auto;
+        grid-column: 40vw 40vw;
+        gap: 5vw;
+        align-items: start;
+    }
+
+    #skillsSection > div:nth-child(2) > div:first-child {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+
+    #skillsSection > div:nth-child(2) > div:nth-child(2) {
+        width: 40vw;
+        grid-row: 2;
+        grid-column: 1;
+        /* align-self: start; */
+    }
+
+    #skillsSection > div:nth-child(2) > div:last-child {
+        width: 40vw;
+        grid-row: 2;
+        grid-column: 2;
+        /* align-self: start; */
+    }
+
+    #skillsSection > div:nth-child(2) > div:last-child::before {
+        transform: rotate(110deg) scaleY(-1);
+    }
+
+    /* ~ Second elaboration ~ */
+
+    #skillsSection > div:nth-child(3) {
+        grid-template-rows: auto 80vh;
+        grid-template-columns: 30vw 30vw 30vw;
+        gap: 2.5vw;
+    }
+
+    #skillsSection > div:nth-child(3) > div:not(:first-child) {
+        width: 30vw;
+        grid-row: 2;
+    }
+
+    #skillsSection > div:nth-child(3) > div:first-child {
+        grid-row: 1;
+        grid-column: 1 / span 3;
+    }
+
+    #skillsSection > div:nth-child(3) > div:nth-child(2) {
+        grid-column: 1;
+        align-self: start;
+    }
+
+    #skillsSection > div:nth-child(3) > div:nth-child(3) {
+        grid-column: 2;
+    }
+    
+    #skillsSection > div:nth-child(3) > div:nth-child(4) {
+        grid-column: 3;
+        align-self: end;
+    }
+    
+    /* ~ Third elaboration */
+
+    #skillsSection > div:nth-child(4) {
+        grid-template-rows: auto auto;
+        grid-template-columns: 62vw 28vw;
+        gap: 2.5vw;
+        margin-bottom: 10vw;   /* to allow for positioning of its last child */
+    }
+
+    #skillsSection > div:nth-child(4) > div:first-child {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+    #skillsSection > div:nth-child(4) > div:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+        width: 62vw;
+        
+    }
+    #skillsSection > div:nth-child(4) > div:last-child {
+        grid-row: 2;
+        grid-column: 2;
+        width: 28vw;
+        top: 10vw;
+    }
+
+    #skillsSection > div:nth-child(4) > div:last-child::before {
+        transform: rotate(160deg) scaleY(-1);
+        left: 3vw;
+        top: -10vw;
+    }
+
+    /* ~ Fourth elaboration ~ */
+
+    #skillsSection > div:nth-child(5) > div:nth-child(3)::before {
+        transform: rotate(150deg) scaleY(-1);
+        top: -5rem;
+    }
+
+}
+
