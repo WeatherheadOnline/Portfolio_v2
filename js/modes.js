@@ -6,8 +6,8 @@ const neonbutton = document.getElementById("neon");
 const ysbutton = document.getElementById("yellowsub")
 
 const mysteryModes = [
-    "mineral",
-    "neon",
+    // "mineral",
+    // "neon",
     "yellowsub",
 ];
 const stylesheets = document.getElementsByClassName("modesheet");

@@ -1,0 +1,495 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~ HTML, body ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+* {box-sizing: border-box;}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    overflow-x: hidden;
+}
+
+a {color: inherit;}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+h2 {font-size: 1.5rem; z-index: 2;}
+
+p, li {font-size: 1.2rem; z-index: 2;}
+
+/* Desktop */
+
+@media screen and (any-hover: hover) {
+    h1 {font-size: 3rem;}
+    h2 {font-size: 2rem;}
+    h3{
+        font-size: 1.6rem;
+        font-weight: bold;
+        /* font-style: italic; */
+    }
+    p, li {font-size: 1.4rem;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Mobile, portrait orientation */
+
+header {
+    height: max-content;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    z-index: 2;
+}
+
+#logo {
+    display: inline;
+    width: max-content;
+    margin: 1vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#logo img {
+    width: 65px;
+    height: auto;
+}
+
+nav {
+    padding: 0.5vh 1vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5vh 0.5vh;        
+}
+
+nav p {
+    text-align: center;
+    margin: 0 1vw;
+    padding: 0.5vh 1vw;
+    font-size: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* Header: Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    header {
+        left: 0;
+        width: min-content;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        width: min-content;
+        height: min-content;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    nav p {
+        margin: 1vh;
+        font-size: 1.2rem;
+    }
+    .hiddenInLandscape {display: none;}
+}
+
+/* Header: Desktop */
+
+@media screen and (any-hover: hover) {
+    header {width: 100%;}
+    nav {
+        height: min-content;
+        padding: 1vh;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 0.5vh 0.5vh;        
+    }
+    nav p {
+        margin: 0;
+        margin-left: calc(2vw - 5px);
+        padding: 0.5vh calc(2vw - 10px);
+        font-size: 1.1rem;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~  Main  ~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Main: Mobile, portrait orientation */
+
+main {margin: 0;}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 8vh 5vw;
+}
+
+.subheader {text-align: center;}
+
+/* Main: Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    section {padding: 5vh 5vw 5vh 15vw;}
+}
+
+@media screen and (any-hover: hover) {
+    section {padding: 6vh 5vw;}    
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~  Home/Welcome section  ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#Home {padding-top: 18vh;}
+
+#Home p {text-align: center;}
+
+/* Home/Welcome: Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #Home {
+        padding-top: 11vh;
+        padding-left: 18vw;
+    }
+}
+
+/* Home/Welcome: Desktop */
+
+@media screen and (any-hover: hover) {
+    #Home {padding-top: 20vh;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  Portfolio & Special Effects sections  ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.folioItemsWrapper, .effectsItemsWrapper {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+article {
+    width: 90vw;
+    min-width: 300px;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.articleText {padding: 0 5%;}
+.articleText h3 {margin-top: 0.5em;}
+
+.effectsItemsWrapper article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.folioItemsWrapper img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}   
+
+.effectsItemsWrapper iframe {
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    position: relative;
+    bottom: 0;
+}   
+
+.int::after {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    white-space: pre;
+    position: absolute;
+    bottom: -20px;
+    right: -10px;    
+    transform: rotate(350deg);
+    transform-origin: left;
+    border-radius: 50px;
+    padding: 1% 3%;
+    font-size: 1rem;
+}
+
+.interactiveMouse::after {
+    content: "Interactive! \A Move your mouse or \A tilt your device";
+}
+
+.interactiveClick::after {
+    content: "Interactive! \A Click to see more";
+}
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    article {
+        width: 80vw;
+        margin: 10vh auto;
+    }
+    .folioItemsWrapper img {
+        width: 80vw;
+        height: auto;
+    }
+    .effectsItemsWrapper iframe {
+        aspect-ratio: unset;
+        height: 70vh;
+        width: 80vw;
+    }
+}
+
+@media screen and (any-hover: hover) {
+    .folioItemsWrapper, .effectsItemsWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 5vw;
+        justify-content: center;
+    }
+    article {
+        width: 40vw;
+        min-width: 400px;
+        max-width: 1000px;
+        /* margin: unset; */
+    }
+}
+
+@media screen and (any-hover: hover) and (max-width: 960px) {
+    article {
+        width: 90vw;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+    min-width: 400px;
+}
+fieldset {
+    margin: 1em 0;
+    padding: 1em 0;
+}
+.contact p {margin: 0;}
+.contact h3 {margin-bottom: 0.2rem;}
+label {display: block;}
+.inputText, label {
+    display: block;
+    width: 60vw;
+    min-width: 380px;
+    max-width: 750px;
+    margin: 0.5em auto;
+}
+#nameAndEmail  {
+    width: 60vw;
+    min-width: 380px;
+    max-width: 750px;
+    margin: 0 auto;
+    display: grid;
+    gap: 8%;
+    grid-template-columns: 46% 46%;
+    justify-content: space-between;
+}
+#nameAndEmail input {width: 100%;}
+@media screen and (any-hover: hover) and (max-width: 900px) {
+    #nameAndEmail {
+        display: block;
+    }
+}
+#buttonsContainer {
+    width: 60vw;
+    min-width: 380px;
+    max-width: 750px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+}
+#messageSent {
+    min-width: max-content;
+    margin: 0;
+    padding: 0.3rem 0.5rem;
+    background-color: #FFFFFF;
+    text-align: right;
+}
+#formButtons {
+    display: flex;
+    justify-content: right;
+    gap: 0.5rem;
+    margin-left: 2rem;
+}
+#formbuttons button {
+    min-width: max-content;
+    padding: 0.3rem 0.5rem;
+}
+#disclaimer {
+    font-size: 0.8em;
+    font-style: italic;
+    width: 60vw;
+    min-width: 300px;
+    max-width: 750px;
+    margin: auto;
+}
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+}
+
+@media screen and (any-hover: hover) {
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    .about-content {padding: 0 5vw;}
+}
+
+@media screen and (any-hover: hover) {
+    .about-content {padding: 0 5vw;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~  Footer ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {margin: 10vh 0;}
+
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.3em 0;
+}    
+/* .credits p {margin: 0.3em;} */
+/* .credits {margin-bottom: 2em;} */
+.greengeeks img {
+    height: 60px;
+    width: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+}    
+
+@media screen and (any-hover: hover) {
+    .greengeeks img {
+        width: 90px;
+        height: auto;
+        display: block;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }    
+    .greengeeks a {
+        display: block;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  Mode buttons  ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#modes {
+    position: fixed;
+    bottom: 0;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 5;
+}
+
+.modeButton {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0 0.75rem 0.75rem 0;
+    border-radius: 20%;
+    position: relative;
+}
+
+.modeButton svg {
+    width: 2rem;   
+    height: 2rem;
+    margin: 0.2rem;
+}
+
+#mystery, #neon, #yellowsub, #mineral {display: none;}
+
+.modeButton .hoverText {
+    visibility: hidden;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 6;
+    text-wrap: nowrap;
+}
+
+/* Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #modes {
+        /* flex-direction: column-reverse; */
+        align-items: center;    
+    }
+    .modeButton {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin: 0 0.75rem 0.75rem 0;
+    }
+        .modeButton svg {
+        width: 1.4rem;   
+        height: 1.4rem;
+        margin: 0.2rem;
+    }
+}
+
+/* Desktop */
+
+@media screen and (any-hover: hover) {
+    #modes {
+        flex-direction: column-reverse;
+        align-items: center;    
+    }
+
+    .modeButton {
+        height: 2.4rem;
+        width: 2.4rem;
+        margin: 0 0.75rem 0.75rem 0;
+    }
+    .modeButton svg {
+        width: 2rem;   
+        height: 2rem;
+        margin: 0.2rem;
+    }
+    .modeButton:hover .hoverText {visibility: visible;}
+}
+
+

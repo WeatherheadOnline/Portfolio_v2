@@ -1,0 +1,124 @@
+body {
+    background-color: #000000;
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "XROT" 0,
+      "YROT" 0;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px red, 0 0 10px #FFFFFF;
+}
+
+section {
+    box-shadow: 0 0 20px 8px inset #00FF0088, 0 0 10px 4px inset #FFFFFF;
+}
+
+section:nth-child(even) {
+    background-color: inherit;
+    color: inherit;
+}
+
+h1, h3 {
+    color: inherit;
+    text-shadow: none;
+    font-family: "Neonderthaw", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 0 20px white, 0 0 10px red, 0 0 5px white;
+}
+
+h3 {font-size: 2em;}
+
+#logo {
+    background-color: #000000;
+    box-shadow: 
+        10px 0 20px blue, 
+        0 10px 20px red, 
+        0 -10px 20px #00FF00, 
+        -10px 0 20px yellow,
+        0 0 15px 10px white inset
+    ;
+
+    /* background-image: url("../img/logo_blue.svg"); */
+}
+
+nav p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit;
+    outline: 2px solid white;
+    border-radius: 0;
+    background-color: #000000;
+    text-shadow: none;
+    box-shadow: 0 0 10px 2px #ffa3a3 inset;
+}
+
+#homeBkgdContainer {
+    filter: drop-shadow(0 0 3px #FFFFFF55);
+    z-index: -1;
+}
+
+#squaresDiv {
+    background-color: #000000;
+}
+
+#binaryDiv {
+    text-shadow: none;
+    background: linear-gradient(
+        110deg, 
+        #000000 10%,
+        #ffd301ff 11%,
+        #e41b13ff 12%,
+        #04437dff 13%,
+        #009fcdff 14%,
+        #000000 15%,
+        #000000 37%,
+        #ffd301ff 38%,
+        #e41b13ff 39%,
+        #04437dff 40%,
+        #009fcdff 41%,
+        #000000 42%,
+        #000000 60%,
+        #ffd301ff 61%,
+        #e41b13ff 62%,
+        #04437dff 63%,
+        #009fcdff 64%,
+        #000000 65%,
+        #000000 80%,
+        #ffd301ff 81%,
+        #e41b13ff 82%,
+        #04437dff 83%,
+        #009fcdff 84%,
+        #ffd301ff 85%,
+        #000000 86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 500vw 28rem;   
+}
+
+.int::after {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0 0 8px #FF0000, 0 0 16px white;
+}
+
+.modeButton .hoverText {
+    background-color: #000000;
+    color: #55FF55;
+    text-shadow: none;
+}
+
+.modeButton {
+    background-color: #000000;
+    box-shadow: 0 0 10px #FFFFFF;
+}
+
+.modeButton svg {
+    fill: #FFFFFF88;
+}
+
+div #neon {
+    outline: 3px solid white;
+}
