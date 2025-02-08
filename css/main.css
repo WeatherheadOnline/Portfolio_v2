@@ -43,17 +43,6 @@ a {color: inherit;}
 
 /* Mobile, portrait orientation */
 
-header {
-    height: max-content;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    z-index: 2;
-}
-
 #logo {
     display: inline;
     width: max-content;
@@ -67,64 +56,6 @@ header {
     height: auto;
 }
 
-nav {
-    padding: 0.7vh 1vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0 1rem;        
-}
-
-nav p {
-    text-align: center;
-    margin: 0;
-    font-size: 1rem;
-    padding: 0.2rem 0.4rem;
-}
-
-nav a {text-decoration: none;}
-
-
-/* Header: Mobile, landscape orientation */
-
-@media screen and (any-hover: none) and (orientation: landscape) {
-    header {
-        left: 0;
-        width: min-content;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1vh;
-    }
-    nav {
-        flex-direction: column;
-        width: min-content;
-        justify-content: space-between;
-        gap: 1vh;
-    }
-    nav p {
-        margin: 1vh;
-        font-size: 1.2rem;
-    }
-    .hiddenInLandscape {display: none;}
-}
-
-
-/* Header: Desktop */
-
-@media screen and (any-hover: hover) {
-    header {width: 100%;}
-    nav {
-        height: min-content;
-        padding: 0.5rem;
-        justify-content: flex-end;
-        gap: 0.5rem max(0.5rem, 3vw);
-    }
-    nav p {
-        /* margin-left: calc(2vw - 5px); */
-        padding: 0.2rem 0.5rem;
-        font-size: 1.1rem;
-    }
-}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

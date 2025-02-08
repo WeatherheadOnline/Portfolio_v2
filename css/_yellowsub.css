@@ -22,6 +22,11 @@ section:nth-child(odd), footer {
     color: #FFFFFF;
 }
 
+section:nth-child(odd) > .sectionWrapper, footer {
+    text-shadow: 0 0 5px #000000;
+}
+
+
 section:nth-child(even) {
     background-image: url(../img/ys_flowers.png), url(../img/ys_holes.svg);
     background-size: max(50vh, 50vw), 100vw;
@@ -67,6 +72,16 @@ email {
     background-image: url("../img/logo_yellowsub.png");
 }
 
+footer {
+    margin: 0;
+    padding: 10vh;
+}
+
+
+/* ************************* */
+/*       Navbar / menu       */
+/* ************************* */
+
 nav p {
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
@@ -74,6 +89,36 @@ nav p {
     border-radius: 100px;
     background-color: #000000;
 }
+
+
+#menu {
+    /* background-color: #ffd301; */
+    background: linear-gradient(
+        135deg,
+        #ffd301 70%,
+        #FFFFFF
+    );
+    outline: 5px solid #e41b13;
+    border-radius: 100px 0 0 100px;
+    box-shadow: 0 0 20px 10px #00000088;
+}    
+
+#menu h4, #menu span {
+    color: #000000;
+}
+
+#menu h4:hover, #menu span:hover {  
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 100px;
+    outline: 3px solid #e41b13;
+    /* box-shadow: 0 2px 8px #00000022; */
+}
+
+
+/* ************************* */
+/*    Background effects     */
+/* ************************* */
 
 #homeBkgdContainer {
     z-index: 0;
@@ -86,32 +131,37 @@ nav p {
 #binaryDiv {
     background: linear-gradient(
         110deg, 
-        #ffd301ff 0%,
-        #e41b13ff 5%,
-        #04437dff 10%,
-        #009fcdff 15%,
-        #ffd301ff 20%,
-        #e41b13ff 25%,
-        #04437dff 30%,
-        #009fcdff 35%,
-        #ffd301ff 40%,
-        #e41b13ff 45%,
-        #04437dff 50%,
-        #009fcdff 55%,
-        #ffd301ff 60%,
-        #e41b13ff 65%,
-        #04437dff 70%,
-        #009fcdff 75%,
-        #ffd301ff 80%,
-        #e41b13ff 85%,
-        #04437dff 90%,
-        #009fcdff 95%,
-        #ffd301ff 100%
+        #ffd30188 0%,
+        #e41b1388 5%,
+        #04437d88 10%,
+        #009fcd88 15%,
+        #ffd30188 20%,
+        #e41b1388 25%,
+        #04437d88 30%,
+        #009fcd88 35%,
+        #ffd30188 40%,
+        #e41b1388 45%,
+        #04437d88 50%,
+        #009fcd88 55%,
+        #ffd30188 60%,
+        #e41b1388 65%,
+        #04437d88 70%,
+        #009fcd88 75%,
+        #ffd30188 80%,
+        #e41b1388 85%,
+        #04437d88 90%,
+        #009fcd88 95%,
+        #ffd30188 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 500vw 28rem;   
 }
+
+
+/* ******************************* */
+/*   Portfolio & Special Effects   */
+/* ******************************* */
 
 .int::after {
     background-color: #000000;
@@ -119,16 +169,19 @@ nav p {
     outline: 5px solid #e41b13ff;
 }
 
+
+/* ************************* */
+/*     "Contact" section     */
+/* ************************* */
+
 fieldset {
     background: #FFFFFF88;
 }
 
-footer {
-    margin: 0;
-    padding: 10vh;
-}
 
-
+/* ************************* */
+/*      "Mode" buttons       */
+/* ************************* */
 
 .modeButton .hoverText {
     background-color: #ffd301;
@@ -139,7 +192,7 @@ footer {
 }
 
 .modeButton {
-    background-color: #FFFFFF55;
+    background-color: #FFFFFFAA;
 }
 
 .modeButton svg {

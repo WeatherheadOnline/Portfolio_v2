@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/_lightmode.css" type="text/css" class="modesheet">
+    <link rel="stylesheet" href="css/menu.css" type="text/css">
     <link rel="stylesheet" href="css/effects.css" type="text/css">
+    <link rel="stylesheet" href="css/_lightmode.css" type="text/css" class="modesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -35,7 +36,22 @@
             <a class="navlink" id="planLink" href="#Plan"><p>Expect</p></a>
             <a class="navlink" id="contactLink" href="#Contact"><p>Contact</p></a>
         </nav>
+
+        <div id="menu-wrapper">
+            <div id="hamburger">
+                <img src="img/hamburger.svg">
+            </div>
+            <div id="menu">
+                <span id="closeMenu">&times;</span>
+                <a href="#Effects"><h4>Special Effects</h4></a>
+                <a href="#Portfolio"><h4>Portfolio</h4></a>
+                <a href="#About"><h4>About</h4></a>
+                <a href="#Plan"><h4>What To Expect</h4></a>
+                <a href="#Contact"><h4>Contact</h4></a>
+            </div>
+        </div>
     </header>
+
     <main>
         <section id="Home">
             <div id="homeBkgdContainer">
@@ -54,7 +70,7 @@
                 <hgroup class="subheader">
                     <h1>Hi. I'm Eddie, and I love making websites.</h1>
                 </hgroup>
-                <p>Let me bring my passion to your project.</p>
+                <p>I'd love to work with you on your next project.</p>
                 <p>Get a <a href="#Portfolio">slick website</a> to show your audience you're a pro.</p> <!-- portfolio link -->
                 <p>Add some <a href="#Effects">special effects</a> to impress them.</p> <!-- special effects link -->
                 <p>Work with a <a href="#About">real person</a> (me!), not an artificial intelligence or a one-size-fits-all tool.</p><!-- about link and/or contact form -->
@@ -69,7 +85,7 @@
                     <p>My wheelhouse and passion is making special effects for websites. Here are some examples of my work. You could have any or all of these special effects built into your website. The images used here are just for demonstration and could be changed to different images or styles.</p>
                 </hgroup>
             </div>
-            <div class="effectsItemsWrapper">
+            <div class="effectsItemsWrapper sectionWrapper">
                 <article id="mineralBkgd" class="int interactiveMouse">
                     <div class="articleText">
                         <h3>Sparkly mineral background</h3>
@@ -129,7 +145,7 @@
                 </hgroup>
             </div>
 
-            <div class="folioItemsWrapper">
+            <div class="folioItemsWrapper sectionWrapper">
             <article>
                 <a href="/CSSsandbox/" target="_blank"><img loading="lazy" src="img/folio_sandbox.png"></a>
                 <div class="articleText">
@@ -304,8 +320,7 @@
         <div class="credits">
             <p>All design and assets by Weatherhead Online except:</p>
             <p><a href="https://www.svgrepo.com/svg/3432/shining-sun">Light mode</a> and <a href="https://www.svgrepo.com/svg/94562/basic-moon" target="_blank">dark mode</a> icons from <a href="svgrepo.com" target="_blank">svgrepo.com</a>;</p>
-            <p>Boognish logo <a href="https://trademarks.justia.com/owners/ween-3814818/" target="_blank">trademarked</a> by Ween;</p>
-            <p>Floral shimmering background design by William Morris; vector reproduction by WeatherheadOnline.com</p>
+            <p>Floral shimmering background design by William Morris (vector reproduction by WeatherheadOnline.com)</p>
         </div>
     </footer>
 
@@ -415,5 +430,6 @@
     <script src="js/modes.js"></script>
     <script src="js/background-glimmer.js"></script>
     <script src="js/clearForm.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>

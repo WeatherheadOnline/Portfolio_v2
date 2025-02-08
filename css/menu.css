@@ -1,0 +1,130 @@
+/* Mobile, portrait orientation */
+
+header {
+    height: max-content;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    z-index: 2;
+}
+
+nav {display: none;}
+
+#hamburger img {
+    width: 5wv;
+    height: auto;
+}
+
+#menu-wrapper {
+    position: fixed;
+    top: 3vw;
+    right: 3vw;
+    z-index: 4;
+}    
+
+#menu {
+    position: fixed;
+    z-index: 5;
+    padding: 20px;
+    right: -300px;
+}    
+
+#menu span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 3rem;
+    margin: 3px;
+    padding: 0 10px 5px;
+    line-height: 3rem;
+}
+
+#menu a {text-decoration: none;}
+
+#menu h4 {
+    margin: 0 3rem 0 0;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+
+/* Header: Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    header {
+        left: 0;
+        width: min-content;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1vh;
+    }
+    nav {
+        padding: 0.7vh 1vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: min-content;
+        justify-content: space-between;
+        gap: 1vh;
+    }
+    nav p {
+        text-align: center;
+        padding: 0.2rem 0.4rem;
+        margin: 1vh;
+        font-size: 1.2rem;
+    }
+    nav a {text-decoration: none;}
+    .hiddenInLandscape {display: none;}
+    #hamburger {display: none;}
+}
+
+
+/* Header: Desktop */
+
+@media screen and (any-hover: hover) and (max-width: 649px) {
+    #menu {
+        overflow: hidden;
+        padding: 2rem;
+    }
+    #menu span {
+        position: absolute;
+        top: -0.5rem;
+        right: 0px;
+        font-size: 2rem;
+        padding: 0 0.8rem;
+        line-height: 3rem;
+    }
+    #menu h4 {
+        margin-right: 2rem;
+    }
+}
+
+
+@media screen and (any-hover: hover) and (min-width: 650px) {
+    header {width: 100%;}
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        height: min-content;
+        padding: 0.5rem;
+        justify-content: flex-end;
+        gap: 0.5rem max(0.5rem, 3vw);
+    }
+    
+    nav p {
+        text-align: center;
+        margin: 0;
+        /* margin-left: calc(2vw - 5px); */
+        padding: 0.2rem 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    nav a {text-decoration: none;}
+    #hamburger {display: none;}
+    #menu {display: none;}
+}

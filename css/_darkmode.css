@@ -39,6 +39,11 @@ h2 {
     }
 }
 
+
+/* ************************* */
+/*       Navbar / menu       */
+/* ************************* */
+
 nav p {
     font-family: Arial, Helvetica, sans-serif;
     color: inherit;
@@ -46,6 +51,20 @@ nav p {
     border-radius: 0;
     background-color: #002e20;
 }
+
+#menu {
+    background-color: black;
+    outline: 2px solid #002e20;
+}    
+#menu h4:hover, #menu span:hover {  
+    background-color: #002e20;
+}
+
+
+
+/* ************************* */
+/*    Background effects     */
+/* ************************* */
 
 #homeBkgdContainer {
     z-index: -1;
@@ -83,7 +102,9 @@ nav p {
 }
 
 
-/* Portfolio & special effects sections */
+/* ******************************* */
+/*   Portfolio & Special Effects   */
+/* ******************************* */
 
 .folioItemsWrapper article,
 .folioItemsWrapper img,
@@ -99,7 +120,9 @@ nav p {
 }
 
 
-/* Contact section */
+/* ************************* */
+/*     "Contact" section     */
+/* ************************* */
 
 input, textarea {
     color: #dff7d9;
@@ -117,15 +140,18 @@ button {
 }
 
 
-/* Mode buttons */
+/* ************************* */
+/*      "Mode" buttons       */
+/* ************************* */
 
 .modeButton .hoverText {
-    background-color: #002017;
+    background-color: #002017AA;
     color: white;
 }
 
 .modeButton {
-    background-color: #00291d88;
+    background-color: #00291dDD;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .modeButton svg {
