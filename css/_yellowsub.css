@@ -26,7 +26,6 @@ section:nth-child(odd) > .sectionWrapper, footer {
     text-shadow: 0 0 5px #000000;
 }
 
-
 section:nth-child(even) {
     background-image: url(../img/ys_flowers.png), url(../img/ys_holes.svg);
     background-size: max(50vh, 50vw), 100vw;
@@ -85,11 +84,15 @@ footer {
 nav p {
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
-    outline: 3px solid #e41b13ff;
+    outline: 3px solid #e41b13;
     border-radius: 100px;
     background-color: #000000;
 }
 
+#hamburger svg {
+    stroke: #e41b13;
+    filter: drop-shadow(0 0 1px #000000);
+}
 
 #menu {
     /* background-color: #ffd301; */

@@ -45,9 +45,7 @@
 
 <script>
     window.addEventListener("load", sparkles);
-    const clickable = document.getElementById("main-content");
-    clickable.addEventListener("click", sparkles);
-    setInterval(sparkles, 3500);
+    setInterval(sparkles, 3000);  // determines how often the effect repeats 
 
     let xCoord = 6;  // determines the spacing between particles
     let i = 0;  // x-coordinate; increments with each loop
@@ -68,21 +66,21 @@
         
         const innerDiv = document.createElement("div");
         innerDiv.classList.add(`sparkle${Math.ceil(Math.random()*4)}`);  // 4 = number of SVGs to choose from
-        innerDiv.style.rotate = `${Math.floor(Math.random()*360)}deg`;
+        innerDiv.style.rotate = `${Math.floor(Math.random()*89)}deg`;
 
         outerDiv.appendChild(innerDiv);
         document.body.appendChild(outerDiv);
-        setTimeout(moveDiv, 1, outerDiv);
+        setTimeout(moveDiv, 1, outerDiv);  // "outerDiv" is being passed as an argument to the "moveDiv" function
         i++;
     }
 
-function moveDiv(sparkle) {
-  let fallHeight = Math.floor(Math.random() * 100) + 200  
-     // determines how far each particle falls. Mimimum distance = 100 (ie 100vh)
-     // since animation time is constant, a higher distance causes faster falling
-  sparkle.style.transform = `translate(0, ${fallHeight}vh)`;
-  setTimeout(function(){sparkle.remove();}, 4000);
-}
+    function moveDiv(sparkle) {
+    let fallHeight = Math.floor(Math.random() * 150) + 150  
+        // determines how far each particle falls. Mimimum distance = 100 (ie 100vh)
+        // since animation time is constant, a higher distance causes faster falling
+    sparkle.style.transform = `translate(0, ${fallHeight}vh)`;
+    setTimeout(function(){sparkle.remove();}, 4000);
+    }
 
 </script>
 </body>

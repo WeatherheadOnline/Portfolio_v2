@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   width="10mm"
-   height="8.2mm"
-   viewBox="0 0 10 8.2"
+   width="9.5mm"
+   height="7.8mm"
+   viewBox="0 0 9.5 7.8"
    version="1.1"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg">
+  <g
+     transform="translate(-250.15313,0.90964792)">
     <path
-       style="fill:none;stroke:#008800;stroke-width:1.75;stroke-linecap:round"
-       d="M 0.87503411,0.87503411 H 9.1249659 M 0.87503411,7.3570999 H 9.1249659 M 0.87503411,4.116067 H 9.1249659" />
+       style="fill:none;fill-opacity:1;stroke:#003664;stroke-width:1.66033;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 250.98331,-0.07948278 h 7.83966 m -7.83966,6.13966808 h 7.83966 m -7.83966,-3.069834 h 7.83966" />
+  </g>
 </svg>

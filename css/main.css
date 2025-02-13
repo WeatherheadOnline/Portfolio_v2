@@ -46,6 +46,7 @@ a {color: inherit;}
 #logo {
     display: inline;
     width: max-content;
+    height: max-content;
     margin: 1vh;
     background-size: contain;
     background-repeat: no-repeat;
@@ -122,7 +123,7 @@ section {
 
 #Home {padding-top: 18vh;}
 #Home p {text-align: center;}
-
+#Home hgroup {margin-bottom: 3rem;}
 
 /* Home/Welcome: Mobile, landscape orientation */
 
@@ -131,10 +132,15 @@ section {
         padding-top: 11vh;
         padding-left: 18vw;
     }
+    #Home hgroup {margin-bottom: 1rem;}
 }
 
 
 /* Home/Welcome: Desktop */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    #Home hgroup {margin-bottom: 1rem;}
+}
 
 @media screen and (any-hover: hover) {
     #Home {padding-top: 20vh;}

@@ -85,7 +85,7 @@ nav {display: none;}
 
 /* Header: Desktop */
 
-@media screen and (any-hover: hover) and (max-width: 649px) {
+@media screen and (any-hover: hover) and (max-width: 599px) {
     #menu {
         overflow: hidden;
         padding: 2rem;
@@ -104,7 +104,7 @@ nav {display: none;}
 }
 
 
-@media screen and (any-hover: hover) and (min-width: 650px) {
+@media screen and (any-hover: hover) and (min-width: 600px) {
     header {width: 100%;}
 
     nav {

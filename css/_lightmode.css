@@ -29,7 +29,7 @@ h2 {
 
 #logo {
     background-color: #FFFFFF88;
-    background-image: url("../img/logo_green.svg");
+    background-image: url("../img/logo_navy.svg");
 }
 
 @media (any-hover: hover) {
@@ -51,6 +51,11 @@ nav p {
     border-radius: 0;
     filter: drop-shadow(2px 4px 5px #00000022);
 }
+
+#hamburger svg {
+    stroke: #00376e;
+}
+
 #menu {
     background-color: #dff7d9;
     /* background: linear-gradient(
