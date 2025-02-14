@@ -334,6 +334,12 @@ article {
 /* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.phone-email {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
 .contact p {margin: 0;}
 .contact h3 {margin-bottom: 0.2rem;}
 .asterisk {color: red;}
@@ -405,6 +411,12 @@ fieldset {
 /* Mobile, in landscape */
 
 @media screen and (any-hover: none) and (orientation: landscape) {
+    .phone-email {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        outline: 1px solid black;
+        }    
     #buttonsWrapper button {
         width: 25vw;
         padding: 0.2rem 0;
@@ -413,7 +425,6 @@ fieldset {
 
 
 /* Desktop */
-
 
     /* Desktop, any width */
 
@@ -425,7 +436,6 @@ fieldset {
     }
 }
     
-
     /* Desktop, screen width up to 600px */
 
 @media screen and (any-hover: hover) and (max-width: 599px) {
@@ -436,7 +446,6 @@ fieldset {
         margin: 10px 5px;
     }    
 }
-
 
     /* Desktop, screen width 600px to 786px */
 
@@ -449,10 +458,15 @@ fieldset {
     }    
 }
 
-
     /* Desktop, screen width 786px and above */
 
     @media screen and (any-hover: hover) and (min-width: 786px){
+        .phone-email {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            outline: 1px solid black;
+                }    
         #nameAndEmail {
             display: grid;
             grid-template-columns: 45% 45%;
@@ -460,7 +474,6 @@ fieldset {
         }
     }
         
-    
     /* Desktop, screen width 786px to 1000px */
 
 @media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
@@ -481,7 +494,6 @@ fieldset {
     #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
     #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
 }
-
 
     /* Desktop, screen width 1000px and above */
 
