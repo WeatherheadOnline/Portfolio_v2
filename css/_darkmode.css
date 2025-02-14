@@ -17,11 +17,11 @@ section {
 h1 {
     color: inherit;
     text-shadow: 0 0 6px #dff7d9BB;
-    font-family: "Cooper Black";
+    /* font-family: "Cooper Black"; */
 }
 
 h2 {
-    font-family: "Cooper Black";
+    /* font-family: "Cooper Black"; */
 }
 
 #Home h2 {

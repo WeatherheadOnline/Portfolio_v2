@@ -13,12 +13,18 @@ html, body {
 }
 
 h1 {
+    font-family: "Cooper Black";
     margin: 0;
     font-size: 2rem;
     z-index: 2;
 }
 
-h2 {font-size: 1.5rem; z-index: 2;}
+h2 {
+    font-family: "Cooper Black";
+    font-size: 1.5rem; 
+    z-index: 2;
+
+}
 p, li {font-size: 1.2rem; z-index: 2;}
 a {color: inherit;}
 
@@ -295,15 +301,38 @@ article {
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-ul {
-    margin-bottom: 5vh;
+#About > div > div {
+    display: flex;
+    flex-direction: column;
+}    
+
+#aboutPart2 p:first-of-type {
+    font-family: "Cooper Black";
+    text-align: center;
+}
+
+#About ul {margin-bottom: 5vh;}
+
+
+/* Desktop, screen width 786px and above  */
+
+@media (hover) and (min-width: 786px) {
+    #About > div > div {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    #aboutPart2 p:first-of-type {
+        font-family: inherit;
+        text-align: left;
+        text-decoration: underline solid black;
+    }    
+    #aboutPart2 p {font-style: italic;}
 }
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 .contact p {margin: 0;}
 .contact h3 {margin-bottom: 0.2rem;}

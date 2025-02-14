@@ -16,11 +16,11 @@ section {
 h1 {
     color: inherit;
     text-shadow: none;
-    font-family: "Cooper Black";
+    /* font-family: "Cooper Black"; */
 }
 
 h2 {
-    font-family: "Cooper Black";
+    /* font-family: "Cooper Black"; */
 }
 
 #Home h2 {
@@ -35,6 +35,9 @@ h2 {
 @media (any-hover: hover) {
     #logo:hover, nav p:hover {
         outline: 2px solid #094e00;
+    }
+    nav p:active {
+        background-color: #FFFFFF;
     }
 }
 
@@ -58,18 +61,6 @@ nav p {
 
 #menu {
     background-color: #dff7d9;
-    /* background: linear-gradient(
-        to left top,
-        #8ff0a700 49.5%,
-        #8ff0a788 50%
-    ), linear-gradient(
-        to left bottom,
-        #8ff0a700 49.5%,
-        #8ff0a788 50%
-    ), linear-gradient(
-        white, white
-    )
-    ; */
     outline: 2px solid #094e00;
     box-shadow: 0 4px 10px 5px #00000022;
 }    
