@@ -83,7 +83,7 @@ section {
 
 .sectionWrapper {
     position: relative;
-    padding: 0 8vw;
+    padding: 0 5vw;
 }
 
 .subheader {text-align: center;}
@@ -92,7 +92,10 @@ section {
 /* Main: Mobile, landscape orientation */
 
 @media screen and (any-hover: none) and (orientation: landscape) {
-    section {padding: 3vh 5vw 5vh 15vw;}
+    section {padding: 3vh 1vw 5vh 13vw;}
+    .sectionWrapper {
+        padding: 0 1vw;
+    }
 }
 
 
@@ -101,7 +104,7 @@ section {
 @media screen and (any-hover: hover) {
     section {padding: 0;}    
     .sectionWrapper {
-        padding: 30px 0;
+        padding: 15px 0;
         margin: 0 auto;
     }
 }
@@ -114,12 +117,12 @@ section {
     .sectionWrapper {width: 550px;}
 }
 
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
     .sectionWrapper {width: 700px;}
 }
 
-@media screen and (any-hover: hover) and (min-width: 1000px) {
-    .sectionWrapper {width: 800px;}
+@media screen and (any-hover: hover) and (min-width: 1024px) {
+    .sectionWrapper {width: 960px;}
 }
 
 
@@ -258,14 +261,14 @@ article {
     article {width: 590px;}
 }
 
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
     article {width: 650px;}
 }
 
 
     /* Above 1000px, switch from one column to two */
 
-@media screen and (any-hover: hover) and (max-width: 999px) {
+@media screen and (any-hover: hover) and (max-width: 1023px) {
     .folioItemsWrapper, .effectsItemsWrapper {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -274,7 +277,7 @@ article {
     }
 }
 
-@media screen and (any-hover: hover) and (min-width: 1000px) {
+@media screen and (any-hover: hover) and (min-width: 1024px) {
     .folioItemsWrapper, .effectsItemsWrapper {
         flex-wrap: wrap;
         gap: 4rem;
@@ -284,7 +287,7 @@ article {
 
     /* Desktop, screen width 1000px and above */
 
-@media screen and (any-hover: hover) and (min-width: 1000px) and (max-width: 1199px) {
+@media screen and (any-hover: hover) and (min-width: 1024px) and (max-width: 1199px) {
     article {width: 450px;}
 }
 
@@ -301,82 +304,142 @@ article {
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#About > div > div {
-    display: flex;
-    flex-direction: column;
-}    
 
-#aboutPart2 p:first-of-type {
-    font-family: "Cooper Black";
-    text-align: center;
+/* #About ul {margin-bottom: 5vh;} */
+
+#About h3 {
 }
 
-#About ul {margin-bottom: 5vh;}
-
-
-/* ************************************************* */
-/* TESTING USE OF GRID FOR PARAGRAHPS */
-
-#aboutParagraphs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    /* grid-template-rows: 1; */
-}
-
-#aboutParagraphs > div {
-    border: 1px solid black;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-#aboutParagraphs > div > p {
-    margin: 0;
-}
-
-
-/* ************************************************* */
-
-
-/* Desktop, screen width 786px to 1000px  */
-
-@media (hover) and (min-width: 786px) {
-    #About > div {width: 650px;}
-}
-
-
-/* Desktop, screen width 1000px to 1200px: layout changes  */
-
-@media (hover) and (min-width: 1000px) {
-    #About > div {width: 932px;}
-    #About > div > div {
-        flex-direction: row;
-        gap: 2.5rem;
+@media screen and (hover) {
+    #About h3 {
+        margin-top: 3rem;
     }
-    #aboutPart2 p:first-of-type {
-        font-family: inherit;
-        text-align: left;
-        text-decoration: underline solid black;
-    }    
-    #aboutPart2 p {font-style: italic;}
+}
+
+#aboutParagraphs {display: grid;}
+
+#aboutParagraphs > div {border: 1px solid black;}
+
+@media screen and (any-hover: none) and (orientation: portrait) {
+    #aboutParagraphs {
+        grid-template-rows: repeat(3, fit-content);
+        align-items: center;
+    }
+    #aboutParagraphs > div {
+        padding: 0 1rem;
+        margin: 1rem 0;
+        width: 75vw;
+    }
+    #aboutParagraphs > div:nth-child(even) {justify-self: right;}
+}
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
+    #aboutParagraphs > div {
+        padding: 0 1vw;
+        margin: 1vw;
+    }
+    #aboutOffer, #aboutMoreSpecs {
+        width: 60vw;
+        margin-left: 10vw;
+    }
+}
+
+@media screen and (hover) {
+    #About > div.sectionWrapper:last-child {
+        display: grid;
+    }
+    #aboutMoreSpecsLinks {
+        display: flex;
+        gap: 1rem;
+    }
+    p.p-outline {
+        margin: 0;
+    }
+}
+
+@media screen and (hover) and (max-width: 1023px) {
+    #aboutParagraphs {
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        gap: 1rem;
+    }
+    #aboutParagraphs > div {
+        width: 75%;
+        padding: 0 2rem;
+    }
+    #aboutParagraphs > div:nth-child(even) {justify-self: right;}
+}
+
+@media screen and (hover) and (min-width: 1024px) {
+    #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
+    #aboutParagraphs > div {
+        padding: 0 1vw;
+        margin: 1vw;
+    }
+}
+
+@media screen and (hover) and (min-width: 1200px) {
+    #About > div.sectionWrapper:last-child {
+        column-gap: 5rem;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: repeat(3, fit-content);
+    }
+    #aboutParagraphs {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #aboutOffer {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #aboutMoreSpecs {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    #aboutMoreSpecsLinks {
+        flex-direction: column;
+    }
+}
+
+#About ul {
+    padding-left: 1.4rem;
+}
+
+#about-li-github {
+    list-style-type: "\F09B";
+}
+#about-li-codepen {
+    list-style-type: ;
+}
+
+.p-outline {
+    outline: 1px solid black;
+    padding: 1rem;
+}
+
+#aboutMoreSpecs a {
+    text-decoration: none;
+}
+
+span.linky {
+    text-decoration: underline;
+}
+
+#About li {
+    /* list-style-type: "\21AA"; curved arrow*/
+    /* list-style-type: "\21E8"; open arrow */
+    /* list-style-type: "\2724"; four-pointed teardrop asterisk */
+    /* list-style-type: "\274B"; eight-pointed teardrop astersk */
+    /* list-style-type: "\2767"; ornamental leaf */
+    /* list-style-type: "\233E"; concentric circles */
+    /* padding-left: 0.2rem; */
 }
 
 
-/* Desktop, screen width 1200px to 1300px  */
-
-@media (hover) and (min-width: 1200px) {
-    #About > div {width: 1132px;}
-    #About > div > div {gap: 3.5rem;}
-}
-
-
-/* Desktop, screen width over 1300px */
-
-@media (hover) and (min-width: 1366px) {
-    #About > div {width: 1232px;}
-    #About > div > div {gap: 4rem;}
-}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -523,7 +586,7 @@ fieldset {
         
     /* Desktop, screen width 786px to 1000px */
 
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 999px) {
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
     form, fieldset, #buttonsWrapper {width: 700px;}
     .inputText, .labelText {width: 650px;}    
     #nameAndEmail {
@@ -544,7 +607,7 @@ fieldset {
 
     /* Desktop, screen width 1000px and above */
 
-@media screen and (any-hover: hover) and (min-width: 1000px) {
+@media screen and (any-hover: hover) and (min-width: 1024px) {
     form, fieldset, #buttonsWrapper, #nameAndEmail {width: 800px;}
     .inputText, .labelText {width: 730px;}    
     #buttonsWrapper button {
