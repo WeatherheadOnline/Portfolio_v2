@@ -234,40 +234,61 @@
             </section>
     
         <section id="About">
+            
             <div class="sectionWrapper">
                 <hgroup class="subheader">
                     <h2>About me</h2>
                 </hgroup>
-                <div><!-- flex wrapper for Parts 1 & 2 -->
-                    <div id="aboutPart1"><!-- Part 1: "About" -->
-                        <p>I love making websites. I’m a molecular biologist by training and trade, and I think DNA and molecular motors are amazing - but it’s just not as much fun as making websites.</p>
-                        <p>I love the process of writing and troubleshooting code. It's like getting to do a logic puzzle, but one that also looks good. I can't tear myself away until the puzzle is solved and everything looks and behaves the way it's intended to.</p>
-                        <p>Whenever I can tear myself away from coding, I enjoy: soldering silver <a href="weatherheaddesigns.com" target="_blank">jewellery</a>; science podcasts; listening to Ween, Steely Dan, and King Gizzard And The Lizard Wizard (not necessarily in that order); and coming up with ideas for cool new background effects for websites.</p>
-                        <p>I have one neurotic cat and one awesome kid, in the foothills of Northern Colorado. </p>
-                        <p>More of my work:</p>
-                        <ul>
-                            <li>Github account: <a href="https://github.com/WeatherheadOnline" target="_blank">github.com/WeatherheadOnline</a></li>
-                            <li>Codepen account: <a href="https://codepen.io/WeatherheadOnline" target="_blank">codepen.io/WeatherheadOnline</a></li>
-                        </ul>
-                        <p>Technical specs:</p>
+            </div>
+
+            <div class="sectionWrapper">    
+
+                <div id="aboutParagraphs">
+                    <div>
+                        <p>I enjoy the process of writing and troubleshooting code. It's like getting to do a logic puzzle, but one that also looks good. I can't tear myself away until the puzzle is solved and everything looks and behaves the way it's intended to.</p>
+                    </div>
+                    <div>
+                        <p>I love making websites. I'm a molecular biologist by training and trade, and I think DNA and molecular motors are amazing - but that's just not as much fun as making websites.</p>
+                    </div>
+                    <div>
+                        <p>When I can tear myself away from coding, I enjoy: soldering silver <a href="weatherheaddesigns.com" target="_blank">jewellery</a>; science podcasts; listening to Ween, Steely Dan, and King Gizzard And The Lizard Wizard; and coming up with cool new background effects for websites.</p>
+                    </div>
+                </div>
+
+                <div id="aboutOffer">
+                    <h3>What I can offer you:</h3>
+                    <ul>
+                        <li>A responsive website that looks great on mobile - in portrait and landscape orientation - and on a range of desktop screen sizes.</li>
+                        <li>A favicon: a custom icon your visitor will see at the top of their browser window.</li>
+                        <li>Animated hover effects to engage your visitor.</li>
+                        <li>Aesthetic background effects to further enhance their experience, including subtle animations or glitter.</li>
+                        <li>User accessibility conforming to current standards, giving your website wider reach and inclusivity.</li>
+                        <li>Modern design. I keep up-to-date with web design trends and can design as well as develop your site.</li>
+                        <li>Code that's well-organized, making it easy to maintain and update.</li>
+                    </ul>
+                </div>
+
+                <div id="aboutMoreSpecs">
+                    <hgroup>
+                        <h3>More of my work:</h3>
+                        <div id="aboutMoreSpecsLinks">
+                            <a href="https://github.com/WeatherheadOnline" target="_blank"><p class="p-outline">Github account: <span class="linky">github.com/WeatherheadOnline</span></p></a>
+                            <a href="https://codepen.io/WeatherheadOnline" target="_blank"><p class="p-outline">Codepen account: <span class="linky">codepen.io/WeatherheadOnline</span></p></a>
+                        </div>
+                    </hgroup>
+
+                    <hgroup>
+                        <h3>Technical specs:</h3>
                         <ul>
                             <li>Proficient in HTML, CSS and JavaScript</li>
                             <li>Entry-level PHP (check out my <a href="#Contact">contact form</a>)</li>
                             <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
                             <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
+                            <li>Design savvy; skilled in Adobe Photoshop and Illustrator</li>
                         </ul>
-                    </div>
-                    <div id="aboutPart2"><!-- Part 2: What I can offer you -->
-                        <p>What I can offer you:</p>
-                        <p>A responsive website that looks great on mobile - in portrait and landscape orientation - and on a range of desktop screen sizes.</p>
-                        <p>A favicon: a custom icon your visitor will see at the top of their browser window.</p>
-                        <p>Animated hover effects to engage your visitor.</p>
-                        <p>Aesthetic background effects to further enhance their experience, including subtle animations or glitter.</p>
-                        <p>User accessibility conforming to current standards, giving your website wider reach and inclusivity.</p>
-                        <p>Modern design. I keep up-to-date with web design trends and can design as well as develop your site.</p>
-                        <p>Well-organized code that's relatively easy to maintain and update.</p>
-                    </div>
-                </div>
+                    </hgroup>
+                </div>    
+
             </div> 
         </section>
         
@@ -276,11 +297,13 @@
                 <hgroup class="subheader">
                     <h2>The Plan: What to expect</h2>
                 </hgroup>
-                <p>If you'd like to find out more, or to take the next step: <a href="#Contact">drop me a line</a>, by <a href="mailto:eddie@weatherheadonline.com"><email>email</email></a> or <a href="sms:970-305-4682">text message</a> (or by <a href="tel:970-305-4682">phone</a>), and we can have a brief chat about the website you'd like to build.</p>
-                <p>We'll set up a time to meet and discuss the details of your website, and sketch out a plan for it. We'll also review and sign a client/developer agreement before we kick into gear. You can preview it <a href="agreement/" target="_blank">here</a>.</p>
-                <p>As the work on your site progresses, I'll be in touch regularly with updates. From time to time I'll need your input, to make sure we're headed in the right direction. We'll work together to stay on track and on time.</p>
-                <p>At the end, I'll be delighted to show you the finished product. I hope you'll love it as much as I enjoyed making it. We'll sit down together and review it, and get your website live on the internet.</p>
-                <p>After we're done: if you find the site isn't looking or behaving the way it's supposed to, please let me know so I can fix it for you. Any repairs can be done for free within the first six months.</p>
+                <div class="grid-5-items">
+                    <p>If you'd like to find out more, or to take the next step: <a href="#Contact">drop me a line</a>, by <a href="mailto:eddie@weatherheadonline.com"><email>email</email></a> or <a href="sms:970-305-4682">text message</a> (or by <a href="tel:970-305-4682">phone</a>), and we can have a brief chat about the website you'd like to build.</p>
+                    <p>We'll set up a time to meet and discuss the details of your website, and sketch out a plan for it. We'll also review and sign a client/developer agreement before we kick into gear. You can preview it <a href="agreement/" target="_blank">here</a>.</p>
+                    <p>As the work on your site progresses, I'll be in touch regularly with updates. From time to time I'll need your input, to make sure we're headed in the right direction. We'll work together to stay on track and on time.</p>
+                    <p class="offset">At the end, I'll be delighted to show you the finished product. I hope you'll love it as much as I enjoyed making it. We'll sit down together and review it, and get your website live on the internet.</p>
+                    <p>After we're done: if you find the site isn't looking or behaving the way it's supposed to, please let me know so I can fix it for you. Any repairs can be done for free within the first six months.</p>
+                </div>
             </div>
         </section>
         
@@ -353,6 +376,7 @@
             <p>All design and assets by Weatherhead Online except:</p>
             <p><a href="https://www.svgrepo.com/svg/3432/shining-sun">Light mode</a> and <a href="https://www.svgrepo.com/svg/94562/basic-moon" target="_blank">dark mode</a> icons from <a href="svgrepo.com" target="_blank">svgrepo.com</a>;</p>
             <p>Floral shimmering background design by William Morris (vector reproduction by WeatherheadOnline.com)</p>
+            <p>Yellow Submarine imagery &copy; Subafilms Ltd.</p>
         </div>
     </footer>
 
