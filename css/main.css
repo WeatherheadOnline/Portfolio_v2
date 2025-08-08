@@ -468,6 +468,7 @@ span.linky {
     padding: 1rem;
     margin: 0;
     border: 1px solid black;
+    z-index: inherit;
 }
 
 @media screen and (hover) {
