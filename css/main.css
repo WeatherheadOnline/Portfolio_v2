@@ -349,6 +349,12 @@ article {
     #About > div.sectionWrapper:last-child {
         display: grid;
     }
+    #aboutParagraphs {
+        gap: 1rem;
+    }
+    #aboutParagraphs > div {
+        padding: 0 2rem;
+    }
     #aboutMoreSpecsLinks {
         display: flex;
         gap: 1rem;
@@ -358,15 +364,22 @@ article {
     }
 }
 
-@media screen and (hover) and (max-width: 1023px) {
+@media screen and (hover) and (max-width: 599px) {
+}
+
+@media screen and (hover) and (max-width: 785px) {
+    #aboutMoreSpecsLinks {
+        flex-direction: column;
+    }
+}
+
+@media screen and (hover) and (min-width: 600px) and (max-width: 1023px) {
     #aboutParagraphs {
         grid-template-rows: repeat(3, 1fr);
         align-items: center;
-        gap: 1rem;
     }
     #aboutParagraphs > div {
         width: 75%;
-        padding: 0 2rem;
     }
     #aboutParagraphs > div:nth-child(even) {justify-self: right;}
 }
@@ -374,8 +387,8 @@ article {
 @media screen and (hover) and (min-width: 1024px) {
     #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
     #aboutParagraphs > div {
-        padding: 0 1vw;
-        margin: 1vw;
+        padding: 0 1rem;
+        margin: 1rem;
     }
 }
 
