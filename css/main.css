@@ -454,6 +454,55 @@ span.linky {
 
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  The Plan section    ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#Plan div.grid-5-items {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: repeat(5, fit-content);
+}
+
+#Plan p {
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid black;
+}
+
+@media screen and (hover) {
+    #Plan div.grid-5-items {
+        gap: 2rem;
+    }
+}
+
+@media screen and (hover) and (min-width: 600px) and (max-width: 1023px), 
+       screen and (any-hover: none) {
+    #Plan div.grid-5-items {
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+    }
+    #Plan div.grid-5-items > p {
+        width: 75%;
+    }
+    #Plan div.grid-5-items > p:nth-child(even) {justify-self: right;}
+}
+
+
+
+@media screen and (hover) and (min-width: 1024px) {
+    #Plan div.grid-5-items {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, fit-content);
+    }
+    #Plan div.grid-5-items > p {
+        grid-column: span 2;
+    }
+    #Plan div.grid-5-items > p.offset {
+        grid-column: 2 / span 2;
+    }
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
