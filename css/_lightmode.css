@@ -2,6 +2,7 @@ body {
     background-color: #FFFFFF;
     font-family: "EB Garamond";
     color: #00291d;
+    border-color: #00291d;
 }
 
 section:nth-child(even) {

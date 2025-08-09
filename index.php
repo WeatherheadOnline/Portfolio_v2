@@ -48,11 +48,11 @@
             </div>
             <div id="menu">
                 <span id="closeMenu">&times;</span>
-                <a href="#Effects" onclick="turnOff()"><h4>Special Effects</h4></a>
-                <a href="#Portfolio" onclick="turnOff()"><h4>Portfolio</h4></a>
-                <a href="#About" onclick="turnOff()"><h4>About</h4></a>
-                <a href="#Plan" onclick="turnOff()"><h4>What To Expect</h4></a>
-                <a href="#Contact" onclick="turnOff()"><h4>Contact</h4></a>
+                <a href="#Effects" onclick="menuOff()"><h4>Special Effects</h4></a>
+                <a href="#Portfolio" onclick="menuOff()"><h4>Portfolio</h4></a>
+                <a href="#About" onclick="menuOff()"><h4>About</h4></a>
+                <a href="#Plan" onclick="menuOff()"><h4>What To Expect</h4></a>
+                <a href="#Contact" onclick="menuOff()"><h4>Contact</h4></a>
             </div>
         </div>
     </header>

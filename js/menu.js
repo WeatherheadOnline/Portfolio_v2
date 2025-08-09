@@ -4,9 +4,9 @@ const closeButton = document.getElementById("closeMenu");
 const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", turnOn);
-closeButton.addEventListener("click", turnOff);
+closeButton.addEventListener("click", menuOff);
 
-function turnOff() {
+function menuOff() {
     menu.style.display = "none";
 }
 
@@ -16,6 +16,6 @@ function turnOn() {
 
 document.onclick = function(event) {
     if(!menuWrapper.contains(event.target)) {
-        turnOff();
+        menuOff();
     };
 }
